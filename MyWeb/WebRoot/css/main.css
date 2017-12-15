@@ -1,0 +1,4162 @@
+/*
+ @Author: 
+ @URL: http://www.rndspot.com
+ This file contains the styling for the actual theme, this
+ is the file you need to edit to change the look of the
+ theme.
+ However we used Less script to make things easy to maintain, this is the compressed ourput, we recommend to edit the less files and then recombile the files and add the result here, if you don't like to use less you can edit this file here.
+ 
+ This files contents are outlined below.
+ 02.	Global Styling
+ 03.	Header
+ 04.	Navigation
+ 05.	Banner
+ 06.	Intro
+ 07.	Hedding
+ 08.	Recent Cause
+ 09.	Weleare Stories
+ 10.	Meet Our Healpeprs
+ 11.	Become Volunteer
+ 12.	Welfair Events
+ 13.	Charity News
+ 14.	Footer
+ 15.	Copy Right
+ 16.	Home 2
+ 17.	Charity Fundraisng
+ 18.	Welfare Project
+ 19.	Urgent Causes
+ 20.	Conting Information
+ 21.	Testimonial
+ 22.	Shop Product
+ 23.	Clint
+ 24.	Home 3 Header
+ 25.	Home 3 Banner
+ 26.	Upcoming Event
+ 27.	Feature
+ 28.	Donaters Help
+ 29.	Welfare Programs
+ 30.	Home 4
+ 31.	Services Tow
+ 32.	Urgent Causes2
+ 33.	Home 5
+ 34.	Donat Charity
+ 35.	Our Causes
+ 36.	Our Causes Detail
+ 37.	Side Bar
+ 38.	Over Events
+ 39.	Over Events Detail
+ 40.	Over Blog
+ 41.	Over Blog Detail
+ 42.	About Authore
+ 43.	Post Comments
+ 44.	Leave Comments
+ 45.	Our Product
+ 46.	Product Detail
+ 47.	Cart 
+ 48.	Checkout
+ 49.	Welfare Project
+ 50.	Our Team
+ 51.	Our Team Deatil
+ 52.	Welfare Program
+ 53.	Gallery Style 1
+ 54.	Gallery Style 2
+ 55.	Gallery Style 4
+ 56.	Gallery Style 5
+ 57.	Gallery Style 6
+ 58.	About Us
+ 59.	Contact Us
+ 60.	404 Error
+ 61.	Event Calender
+ 
+*/
+/* =============================================
+                Global Styling
+============================================= */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.6;
+}
+h2, h3, h4, h5, h6,
+h2 a, h3 a, h4 a, h5 a, h6 a{
+    padding: 0; margin: 0;
+}
+h1, h2{
+    padding: 0; margin: 0;
+}
+h1 a, h2 a{
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+    font-weight: normal;
+}
+h3 a, h4 a, h5 a, h6 a{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: none;
+    display: inline-block;
+    color: #333333;
+}
+h1{
+    font-size: 64px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+h2{
+    font-size: 38px;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    color: #333;
+}
+h3{
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #333333;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+h3 a{
+    color: #333333;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+h4{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #333;
+}
+h4 a{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #333;
+}
+h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+p a {
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.6;
+}
+p a:hover {text-decoration:none;}
+p {
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0 0 0px;
+}
+a {
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    text-decoration: none; 
+    transition: all 0.5s ease-in-out;
+}
+a:hover, a:focus, a:active {
+    outline: none;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    color: #666666;
+}
+ul li a{
+    list-style: none;
+    font-family: 'Arimo', sans-serif;
+    font-size: 15px;
+    color: #666666;
+}
+.btn{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 2px;
+    text-transform: uppercase;
+    padding: 14px 35px 12px;
+    border: 2px solid;
+}
+.btn:hover{
+    background-color: transparent;
+}
+.btn2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 2px;
+    text-transform: uppercase;
+    padding: 14px 35px 12px;
+    border: 2px solid;
+    display: inline-block;
+    background-color: transparent;
+}
+.btn2:hover{
+    color: #fff;
+}
+img {
+    max-width: 100%;
+}
+i{
+    line-height: 1;
+}
+.layout{
+    width: 100%;
+    float: left;
+}
+.section-padding{
+    padding: 110px 0;
+}
+.child-pernt {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.child {
+    display: table-cell;
+    vertical-align: middle;
+}
+figure {
+    margin: 0;
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: #fff;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus{
+    outline: none;
+    outline-offset: 0;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+#xp-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+/*===============================
+        Header Strat
+===============================*/
+.xp-top-header{
+    background-color: #111111;
+}
+.xp-top-header .xp-top-search {
+    display: inline-block;
+    vertical-align: top;
+}
+.xp-top-header .xp-top-search input[type="submit"]{
+    font-size: 13px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+.xp-top-header .xp-top-search input[type="search"]{
+    position: relative;
+    border: none;
+    background-color: transparent;
+    font-family: 'Arimo', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    padding-left: 6px;
+    height: 55px;
+}
+.xp-top-header .xp-top-socail{
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+}
+.xp-top-header .xp-top-socail ul li{
+    float: left;
+    margin-right: 1px;
+}
+.xp-top-header .xp-top-socail ul li a{
+    color: #fff;
+    font-size: 13px;
+    background-color: #191919;
+    display: inline-block;
+    padding: 17px 21px;
+}
+.xp-top-header .xp-top-location{
+    float: right;
+    padding: 15px 0;
+}
+.xp-top-header .xp-top-location ul li{
+    float: left;
+    position: relative;
+    margin: 0 25px;
+}
+.xp-top-header .xp-top-location ul li:last-child{
+    margin-right: 0;
+}
+.xp-top-header .xp-top-location ul li:last-child:after{
+    display: none;
+}
+.xp-top-header .xp-top-location ul li:after{
+    background-color: #fff;
+    width: 1px;
+    height: 9px;
+    position: absolute;
+    content: "";
+    right: -26px;
+    top: 10px;
+}
+.xp-top-header .xp-top-location ul li i{
+    color: #fff;
+    font-size: 12px;
+    margin-right: 9px;
+}
+.xp-top-header .xp-top-location ul li a{
+    color: #fff;
+    font-size: 12px;
+}
+/*===============================
+       Navigation Strat
+===============================*/
+.xp-last-header .xp-logo{
+    padding: 33px 0;
+}
+.xp-navigation{
+    text-align: right;
+}
+.xp-navigation .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    vertical-align: middle;
+    padding: 45px 0;
+    margin-right: 107px;
+}
+.xp-navigation .navbar {
+    border: medium none;
+    border-radius: 0;
+    margin-bottom: 0;
+    min-height: inherit;
+}
+.xp-navigation .navbar-nav > li{
+    margin: 0 22px;
+    position: relative;
+}
+.xp-navigation .nav > li > a{
+    color: #292929;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 13px 0 0 0;
+}
+.xp-navigation .nav > li > a:hover{
+    background: url(../images/mouse-hover-img.png) center 0 no-repeat;
+}
+.xp-navigation .navbar-default .navbar-nav > .active > a, .xp-navigation .navbar-default .navbar-nav > .active > a:hover, .xp-navigation .navbar-default .navbar-nav > .active > a:focus{
+    background: transparent url(../images/mouse-hover-img.png) center 0 no-repeat;
+}
+.xp-navigation .xp-donait-now {
+    bottom: 15px;
+    position: absolute;
+    right: -42px;
+    transform: rotate(-90deg);
+    vertical-align: middle;
+    z-index: 11;
+}
+.xp-navigation .xp-donait-now a{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 17px 43px;
+    display: inline-block;
+    border-radius: 40px 0 0 40px;
+}
+/* Sub Menu */
+.xp-sub-menu {
+    background-color: #111111;
+    position: absolute;
+    text-align: left;
+    top: 60px;
+    width: 200px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.xp-sub-menu ul li a{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.xp-navigation .navbar-nav > li:hover .xp-sub-menu{
+    top: 33px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+}
+/*===============================
+       Banner Strat
+===============================*/
+.xp-inner-banner .xp-image-holder{
+    position: relative;
+}
+.xp-inner-banner .xp-image-holder .xp-ovrlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.70);   
+}
+.xp-inner-banner .xp-text-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.xp-inner-banner .xp-text-box h1{
+    color: #fff;
+    text-transform: uppercase;  
+    margin-bottom: 19px;
+}
+.xp-inner-banner .xp-text-box a{
+    text-transform: none;
+    letter-spacing: 1px;
+    padding: 13px 34px 14px;
+    border-radius: 0;
+    margin-bottom: 25px;
+}
+.xp-inner-banner .xp-text-box p{
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    width: 730px;
+}
+.xp-home1-banner .owl-theme .owl-controls {
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    top: 43%;
+    width: 100%;
+}
+.xp-home1-banner .owl-theme .owl-controls .owl-buttons div{
+    border-radius: 0;
+    opacity: 1;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 15px 39px;
+    margin: 0;
+    transform: rotate(-90deg);
+}
+.xp-home1-banner .owl-prev{
+    position: absolute;
+    left: -55px;
+}
+.xp-home1-banner .owl-next{
+    position: absolute;
+    right: -56px;
+}
+/*===============================
+       Intro  Strat
+===============================*/
+.xp-intro{
+    background-color: #fafafa;
+    position: relative;
+}
+.xp-intro-progred .donation-meter {
+    margin-right: 10px;
+    float: left;
+}
+.xp-intro-progred .donation-meter .glass {
+    background: #ebebeb none repeat scroll 0 0;
+    border-radius: 0;
+    display: block;
+    height: 496px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 50px;
+}
+.xp-intro-progred .donation-meter .amount {
+    background: #222222 none repeat scroll 0 0;
+    border-radius: 0;
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+.xp-intro-progred .donation-meter .goal {
+    font-size: 30px;
+}
+.xp-intro-progred .donation-meter .total {
+    font-size: 16px;
+    margin-bottom: -35px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    z-index: 1;
+}
+.xp-intro-inner {
+    margin-top: 9px;
+    position: relative;
+    z-index: 1;
+}
+.xp-intro-inner .xp-text-box {
+    width: 70%;
+}
+.xp-intro-inner .xp-text-box span{
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 3px;
+}
+.xp-intro-inner .xp-text-box h2{
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+.xp-intro-inner .xp-text-box p{
+    line-height: 1.8;
+    margin-bottom: 42px;
+}
+.xp-intro-need{
+    margin-top: 60px;
+}
+.xp-intro-need .xp-image-holder{
+    position: relative;
+}
+.xp-intro-need .xp-text-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(21, 21, 21, 0.90);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.xp-intro-need .xp-text-box p{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.xp-intro-need .xp-text-box h3{
+    font-size: 28px;
+    color: #fff;
+}
+.xp-intro-need .xp-image-holder:hover .xp-text-box{
+    background-color: rgba(104, 178, 13, 0.90);
+    transition: all 0.5s ease-in-out;
+}
+.xp-intro-image{
+    position: absolute;
+    right: 0;
+    top: -110px;
+}
+/*===============================
+        Hedding Strat
+===============================*/
+.hedding{
+    text-align: center;
+    position: relative;
+    padding-bottom: 32px;
+    margin-bottom: 50px;
+}
+.hedding:after{
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 2px;
+    left: 534px;
+    bottom: 0;
+    background-color: #dddddd;
+}
+.hedding:before{
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 2px;
+    right: 536px;
+    bottom: 0;
+    background-color: #dddddd;
+}
+.hedding h2{
+    padding-bottom: 12px;
+}
+.hedding p{
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    position: relative;
+}
+.hedding p:after{
+    background-color: #dddddd;
+    bottom: -27px;
+    content: "";
+    height: 4px;
+    left: 49.9%;
+    position: absolute;
+    width: 2px;
+}
+.hedding p:before{
+    background-color: #dddddd;
+    bottom: -39px;
+    content: "";
+    height: 4px;
+    right: 49.98%;
+    position: absolute;
+    width: 2px;
+}
+/*===============================
+       Recent Cause Strat
+===============================*/
+.xp-recent-cause .item{
+    padding: 0 15px;
+}
+.xp-recent-cause-inner{
+    overflow: hidden;
+    cursor: pointer;
+}
+.xp-recent-cause-inner .xp-image-holder{
+    position: relative;
+}
+.xp-recent-cause-inner .xp-image-holder img{
+    width: 100%;
+}
+.xp-recent-cause-inner .xp-donat-buton{
+    background-color: rgba(0, 0, 0, 0.60);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+.xp-donat-persntage{
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.xp-donat-persntage:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+}
+.xp-donat-persntage .xp-persntage{
+    display: inline-block;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 105px;
+    padding: 9px 10px 10px;
+}
+.xp-donat-persntage .xp-donors span{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 12px 24px 10px;
+}
+.xp-donat-persntage .xp-donors span i{
+    margin-right: 6px;
+}
+.xp-recent-cause-inner .xp-text-box{
+    text-align: center;
+    margin-top: 49px;
+}
+.xp-recent-cause-inner .xp-text-box h4 a{
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 14px;
+}
+.xp-recent-cause-inner .xp-text-box p{
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    color: #555555;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.xp-recent-cause-inner .xp-donat-info{
+    background-color: #222222;
+    margin-top: 44px;
+    transition: all 0.5s ease-in-out;
+}
+.xp-recent-cause-inner .xp-donat-info ul li{
+    float: left;
+    padding: 26px 0;
+    position: relative;
+    text-align: center;
+    width: 50%;
+}
+.xp-recent-cause-inner .xp-donat-info ul li:after{
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    width: 1px; 
+    height: 20px;
+    right: 2px;
+    top: 40px;
+}
+.xp-recent-cause-inner .xp-donat-info ul li:last-child:after{
+    display: none;
+}
+.xp-recent-cause-inner .xp-donat-info ul li span{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    display: block;
+    padding-bottom: 6px;
+}
+.xp-recent-cause-inner .xp-donat-info ul li h3{
+    transition: all 0.5s ease-in-out;
+}
+.xp-recent-cause-inner:hover .xp-donat-buton{
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.xp-recent-cause-inner:hover .xp-donat-persntage{
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+}
+.xp-recent-cause-inner:hover .xp-donat-info{
+    transition: all 0.5s ease-in-out;
+}
+.xp-recent-cause-inner:hover .xp-donat-info h3{
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+/*===============================
+       Process Strat
+===============================*/
+.xp-process{
+    position: relative;
+}
+.xp-process .xp-process-inner{
+    text-align: center;
+    counter-increment: item;
+    position: relative;
+}
+.xp-process .xp-process-inner:after{
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.06);
+    content: counter(item, decimal);
+    font-size: 160px;
+    left: 0;
+    position: absolute;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+}
+.xp-process .xp-process-inner h3 a{
+    color: #fff;
+    margin-top: 26px;
+    display: block;
+}
+.xp-process .xp-process-inner .xp-shape{
+    border: 2px solid;
+    display: inline-block;
+    width: 16px;
+    padding: 4px 0;
+    height: 16px;
+    margin-top: 19px;
+    margin-bottom: 17px;
+    position: relative;
+}
+.xp-process .xp-process-inner .xp-shape:after{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    left: 4px;
+    top: 4px;
+}
+.xp-process .xp-process-inner p{
+    color: #fff;
+    margin: 0 auto;
+    width: 82%;
+}
+.xp-process .xp-process-inner .read-more{
+    border: 2px solid #fff;
+    border-radius: 3px;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    padding: 15px 46px;
+    margin-top: 34px;
+}
+/*===============================
+      Weleare Stories Strat
+===============================*/
+.xp-weleare-stories{
+    position: relative;
+}
+.xp-weleare-stories-inner .xp-image-holder{
+    position: relative;
+    z-index: 1;
+    margin: 0 -14px;
+}
+.xp-weleare-stories-inner .xp-text-box{
+    padding-left: 49px;
+    margin-top: 137px;
+}
+.xp-weleare-stories-inner .xp-text-box h3 a{
+    color: #444444;
+    display: block;
+    padding-top: 17px;
+    padding-bottom: 14px;
+    text-transform: none;
+}
+.xp-weleare-stories-inner .xp-text-box span{
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+}
+.xp-weleare-stories-inner .xp-text-box span strong{
+    font-size: 18px;
+    margin-left: 2px;
+}
+.xp-weleare-stories-inner .xp-text-box p{
+    padding-top: 25px;
+}
+.xp-weleare-stories-listing{
+    background-color: #ebebeb;
+    bottom: 49px;
+    padding: 15px 170px;
+    position: absolute;
+    text-align: right;
+    left: 0;
+}
+.xp-weleare-stories-listing ul li{
+    display: inline-block;
+    position: relative;
+    margin: 0 17px;
+}
+.xp-weleare-stories-listing ul li:last-child{
+    margin-right: 0;
+}
+.xp-weleare-stories-listing ul li:last-child:after{
+    display: none;
+}
+.xp-weleare-stories-listing ul li:after{
+    position: absolute;
+    content: "";
+    background-color: #bbbbbb;
+    width: 2px;
+    height: 10px;
+    right: -20px;
+    top: 8px;
+}
+.xp-weleare-stories-listing ul li a{
+    color: #555555;
+    font-size: 12px;
+}
+.xp-weleare-stories-listing-second{
+    text-align: left;
+    padding-left: 83px;
+}
+.xp-weleare-stories-second .xp-text-box{
+    padding-left: 0;
+    padding-right: 100px;
+}
+.view-stories{
+    text-align: center;
+    margin-top: 70px;
+}
+/*===============================
+     Meet Our Healpeprs Strat
+===============================*/
+.xp-meet-healpers{
+    background-color: #fafafa;
+}
+.xp-meet-healpers .item{
+    padding: 0 25px;
+}
+.xp-meet-healpers-inner .xp-image-holder{
+    position: relative;
+}
+.xp-meet-healpers-inner .xp-image-holder img{
+    width: 100%;
+}
+.xp-meet-healpers-inner .xp-text-box{
+    background-color: #ffffff;
+    border-right: 4px solid;
+    bottom: 37px;
+    height: 24%;
+    left: 21px;
+    overflow: hidden;
+    padding: 31px 20px;
+    position: absolute;
+    width: 100%;
+    transition: height 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.xp-meet-healpers-inner .xp-text-box h4 a{
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+}
+.xp-meet-healpers-inner .xp-text-box span{
+    font-size: 12px;
+    transition: all 0.5s ease-in-out;
+}
+.xp-meet-healpers-inner .xp-text-box p{
+    padding-top: 30px;
+}
+.xp-meet-healpers-inner .xp-text-box .xp-phone-numbr{
+    background-color: #558d0e;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 42px;
+}
+.xp-meet-healpers-inner .xp-text-box .xp-phone-numbr i{
+    margin-right: 5px;
+}
+.xp-meet-healpers-inner .xp-image-holder:hover .xp-text-box{
+    height: 83%;
+    padding: 45px 20px 20px;
+    text-align: center;
+    transition: height 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.xp-meet-healpers-inner .xp-image-holder:hover .xp-text-box h4 a,
+.xp-meet-healpers-inner .xp-image-holder:hover .xp-text-box span,
+.xp-meet-healpers-inner .xp-image-holder:hover .xp-text-box p{
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+/*===============================
+     Become Volunteer Strat
+===============================*/
+.xp-become-volunteer-inner{
+    position: relative;
+}
+.xp-become-volunteer-inner .xp-ovelay{
+    background-color: rgba(34, 34, 34, 0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.xp-become-volunteer-inner  .xp-text-box{
+    position: relative;
+    padding: 68px 170px 80px;
+}
+.xp-become-volunteer-inner  .xp-text-box .xp-text-box-inner{
+    float: left;
+    width: 79%;
+    padding-top: 17px;
+}
+.xp-become-volunteer-inner  .xp-text-box .xp-text-box-inner h3 a{
+    color: #fff;
+    font-size: 28px;
+    padding-bottom: 15px;
+}
+.xp-become-volunteer-inner  .xp-text-box .xp-text-box-inner p{
+    color: #fff;
+}
+.xp-become-volunteer-inner  .xp-text-box .xp-join-noew{
+    position: absolute;
+    right: 123px;
+    top: 117px;
+    transform: rotate(-90deg);
+}
+.xp-become-volunteer-inner  .xp-text-box .xp-join-noew a{
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 2px solid;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 16px 37px 13px;
+
+}
+.xp-become-volunteer-inner  .xp-text-box .xp-join-noew a:hover{
+    color: #fff;
+}
+/*===============================
+     Welfair Events Strat
+===============================*/
+.xp-welfair-inner{
+    padding-top: 144px;
+}
+.xp-welfair-inner .xp-text-box span{
+    display: block;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 7px;
+    letter-spacing: 1px;
+}
+.xp-welfair-inner .xp-text-box h3 a{
+    display: block;
+    font-family: "Poppins",sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 18px;
+    text-transform: uppercase;
+}
+.xp-welfair-inner .xp-view-calendar{
+    margin-top: 47px;
+}
+.xp-welfair-inner .xp-view-calendar a{
+    border: 2px solid;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 35px 13px;
+    text-transform: uppercase;
+}
+.xp-welfair-inner .xp-view-calendar a:hover{
+    color: #fff;
+}
+.xp-events-inner .xp-events-grid{
+    float: left;
+    padding: 5px;
+    width: 50%;
+}
+/* ---- .grid-item ---- */
+.grid-item {
+    float: left;
+    width: 100%;
+}
+.xp-events-inner .xp-events-grid .xp-image-holder{
+    position: relative;
+    overflow: hidden;
+}
+.xp-events-inner .xp-events-grid .xp-text-box{
+    background-color: rgba(0, 0, 0, 0.80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0 35px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.xp-events-inner .xp-events-grid .xp-text-box span{
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 14px;
+    display: block;
+}
+.xp-events-inner .xp-events-grid .xp-text-box h3 a{
+    font-size: 18px;
+    color: #fff;
+    text-transform: none;
+    padding-bottom: 30px;
+    display: block;
+}
+.xp-events-inner .xp-events-grid .xp-text-box .btn{
+    padding: 12px 20px 10px;
+    text-transform: none;
+    font-weight: normal;
+}
+.xp-events-inner .xp-events-grid .xp-text-box .btn i{
+    margin-right: 5px;
+}
+.xp-events-inner .xp-events-grid .xp-text-hover{
+    background-color: rgba(113, 182, 27, 0.90);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0 35px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.xp-events-inner .xp-events-grid .xp-text-hover i{
+    color: #fff;
+    font-size: 40px;
+}
+.xp-events-inner .xp-events-grid .xp-text-hover p{
+    color: #fff;
+    padding-top: 17px;
+}
+.xp-events-grid:hover .xp-text-box{
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+}
+.xp-events-grid:hover .xp-text-hover{
+    right: 0;
+    transition: all 0.5s ease-in-out;
+}
+/*===============================
+     Charity News Strat
+===============================*/
+.xp-charity-news-second{
+    padding-top: 110px;
+}
+.xp-charity-news{
+    padding-bottom: 110px;
+}
+
+.xp-charity-news .item{
+    padding: 0 15px;
+}
+.xp-charity-news-inner .xp-image-holder{
+    position: relative;
+    width: 100%;
+}
+.xp-charity-news-inner .xp-image-holder img{
+    width: 100%;
+}
+.xp-charity-news-inner .xp-date{
+    text-align: center;
+    padding: 30px 19px;
+    position: absolute;
+    right: 20px;
+    bottom: -27px;
+}
+.xp-charity-news-inner .xp-date h3{
+    color: #fff;
+    font-size: 28px;
+    padding-bottom: 2px;
+}
+.xp-charity-news-inner .xp-date p{
+    color: #000;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+}
+.xp-charity-news-inner .xp-text-box{
+    margin-top: 26px;
+}
+.xp-charity-news-inner .xp-text-box ul li{
+    display: inline-block;
+    font-size: 12px;
+    color: #555;
+    margin-right: 35px;
+    position: relative;
+}
+.xp-charity-news-inner .xp-text-box ul li:last-child{
+    margin-right: 0;
+}
+.xp-charity-news-inner .xp-text-box ul li:last-child:after{
+    display: none;
+}
+.xp-charity-news-inner .xp-text-box ul li:after{
+    position: absolute;
+    content: "";
+    background-color: #bbbbbb;
+    width: 2px;
+    height: 10px;
+    right: -20px;
+    top: 5px;
+}
+.xp-charity-news-inner .xp-text-box h4 a{
+    font-size: 17px;
+    font-weight: 600;
+    color: #444444;
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 16px;
+    padding-top: 10px;
+}
+/*===============================
+         Footer Strat
+===============================*/
+.footer{
+    position: relative;
+}
+.xp-ovrlay{
+    background-color: rgba(0, 0, 0, 0.90);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.footer-inner h3 span{
+    position: relative;
+    display: block;
+}
+.footer-inner h3 span:after{
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: -76px;
+    top: 8px;
+    width: 48px;
+}
+.footer-inner h3{
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 43px;
+}
+.footer-inner h3:after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 5px;
+    right: -27px;
+    top: 0px;
+}
+.footer-inner h3:before{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 5px;
+    right: -27px;
+    top: 13px;
+}
+.footer-inner .footer-flicker ul li{
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    width: 31.8%;
+}
+.footer-inner .footer-flicker ul li:nth-child(3n+3){
+    margin-right: 0;
+}
+.footer-inner .footer-help-comanis ul li{
+    margin-bottom: 23px;
+}
+.footer-inner .footer-help-comanis ul li:last-child{
+    margin-bottom: 0;
+}
+.footer-inner .footer-help-comanis ul li .xp-shapes{
+    border: 2px solid #bbbbbb;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+.footer-inner .footer-help-comanis ul li a{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 13px; 
+    position: relative;
+    padding-left: 15px;
+}
+.footer-inner .footer-help-comanis ul li a:after{
+    background-color: #bbbbbb;
+    content: "";
+    height: 4px;
+    left: -12px;
+    position: absolute;
+    top: 6px;
+    width: 4px;
+    transition: all 0.5s ease-in-out;
+}
+.footer-inner .footer-help-comanis ul li:hover .xp-shapes{
+    border: 2px solid;
+    transition: all 0.5s ease-in-out;
+}
+.footer-latest-inner{
+    margin-bottom: 20px;
+}
+.footer-latest-inner .xp-image-holder{
+    float: left;
+    margin-right: 25px;
+}
+.footer-latest-inner .xp-text-box{
+    float: left;
+    width: 58%;
+    padding-top: 5px;
+}
+.footer-latest-inner .xp-text-box span{
+    font-size: 11px;
+    font-weight: 600;
+    display: block;
+    padding-bottom: 9px;
+}
+.footer-latest-inner .xp-text-box h4 a{
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+.footer-latest-news .footer-latest-inner:last-child{
+    margin-bottom: 0;
+}
+.footer-inner .footer-pain p{
+    color: #fff;
+}
+.footer-inner .footer-pain ul{
+    margin-top: 43px;
+    margin-bottom: 23px;
+}
+.footer-inner .footer-pain ul li{
+    display: inline-block;
+    margin-right: 3px;
+}
+.footer-inner .footer-pain ul li a{
+    color: #fff;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.10);
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    padding-top: 11px;
+}
+/*===============================
+         Copy Right Strat
+===============================*/
+.xp-copyright{
+    background-color: #101010;
+    text-align: center;
+    padding: 39px 0;
+}
+.xp-copyright p{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.xp-copyright p span{
+    font-weight: bold;
+}
+/*===============================
+         Home 2 Strat
+===============================*/
+.xp-charity-services{
+    padding-bottom: 0;
+}
+.xp-charity-services-inner .xp-charity-colum{
+    margin-bottom: 87px;
+}
+.xp-charity-services-inner .xp-charity-colum:last-child{
+    margin-bottom: 0;
+}
+.xp-charity-services-inner .xp-charity-colum .xp-image-holder{
+    float: left;
+    margin-left: 25px;
+    margin-top: 11px;
+}
+.xp-charity-services-inner .xp-charity-colum .xp-image-holder a{
+    background-color: #222222;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.xp-charity-services-inner .xp-charity-colum .xp-text-box{
+    text-align: right;
+    float: left;
+    width: 68%;
+}
+.xp-charity-services-inner .xp-charity-colum .xp-text-box h4 a{
+    color: #444444;
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    padding-bottom: 11px;
+    text-transform: uppercase;
+}
+.xp-charity-colum.xp-charity-colum-second .xp-image-holder{
+    margin-left: 0;
+    margin-right: 25px;
+}
+.xp-charity-colum.xp-charity-colum-second .xp-text-box {
+    text-align: left;
+}
+.xp-charty-service-child {
+    margin-left: -40px;
+    width: 125%;
+}
+/*===============================
+     Charity Fundraisng Strat
+===============================*/
+.xp-charity-fundraising {
+    position: relative;
+    padding: 110px 0;
+    width: 85%;
+    margin: 0 auto;
+}
+.xp-charity-fundraising .xp-ovrlay{
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.xp-charity-fundraising-inner{
+    text-align: center;
+}
+.xp-charity-fundraising-inner span{
+    border-radius: 2px;
+    color: #ffffff;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 15px 37px 13px;
+    display: inline-block;
+}
+.xp-charity-fundraising-inner h2{
+    color: #fff;
+    padding-bottom: 23px;
+    padding-top: 16px;
+}
+.xp-charity-fundraising-inner p{
+    color: #ffffff;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 63%;
+}
+.xp-charity-fundraising-inner a{
+    border: 2px solid;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px 46px;
+    text-transform: uppercase;
+    margin-top: 36px;
+}
+.xp-charity-fundraising-inner a:hover{
+    color: #fff;
+}
+/*===============================
+     Welfare Project Strat
+===============================*/
+.xp-welfare-project{
+    margin: 0 -15px;
+}
+.xp-welfare-project .item{
+    padding: 0 15px;
+}
+.xp-welfare-inner .xp-img-holder{
+    position: relative;
+    overflow: hidden;
+}
+.xp-welfare-inner .xp-img-holder img{
+    width: 100%;
+}
+.xp-welfare-inner .xp-text-hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+.xp-welfare-inner .xp-text-hover span{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+.xp-welfare-inner .xp-text-hover h3{
+    font-size: 33px;
+    padding-bottom: 23px;
+}
+.xp-welfare-inner .xp-text-hover ul li{
+    margin-bottom: 10px;
+}
+.xp-welfare-inner .xp-text-hover ul li a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.xp-welfare-inner .xp-text-hover ul li a i{
+    margin-right: 15px;
+}
+.xp-welfare-inner .xp-text-box{
+    margin-top: 26px;
+}
+.xp-welfare-inner .xp-text-box ul li{
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    color: #777777;
+    margin-right: 33px;
+    position: relative;
+}
+.xp-welfare-inner .xp-text-box ul li:last-child{
+    margin-right: 0;
+}
+.xp-welfare-inner .xp-text-box ul li:last-child:after{
+    display: none;
+}
+.xp-welfare-inner .xp-text-box ul li:after{
+    position: absolute;
+    content: "";
+    background-color: #777777;
+    width: 5px;
+    height: 1px;
+    right: -21px;
+    top: 8px;
+}
+.xp-welfare-inner .xp-text-box h3 a{
+    font-size: 18px;
+    color: #333;
+    display: block;;
+    padding-top: 12px;
+    padding-bottom: 13px;
+}
+.xp-welfare-inner .xp-text-box .xp-help-homeless{
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    margin-top: 34px;
+    display: inline-block;
+}
+.xp-welfare-inner .xp-text-box .xp-help-homeless:after{
+    position: absolute;
+    content: "";
+    width: 54px;
+    height: 2px;
+    right: -72px;
+    top: 8px;
+}
+.xp-welfare-inner:hover .xp-text-hover{
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+/*===============================
+      Urgent Causes Strat
+===============================*/
+.xp-urgent-causes{
+    background-color: #fafafa;
+    position: relative;
+}
+.xp-urgent-causes .xp-urgent-inner {
+    padding-top: 13px;
+}
+.xp-urgent-causes .xp-urgent-inner span{
+    border-radius: 2px;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 15px 37px 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.xp-urgent-causes .xp-urgent-inner h3{
+    color: #282828;
+    font-size: 24px;
+    text-transform: none;
+    padding-top: 17px;
+    padding-bottom: 21px;
+}
+.xp-urgent-causes .xp-urgent-inner ul{
+    margin-top: 29px;
+}
+.xp-urgent-causes .xp-urgent-inner ul li{
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    color: #444444;
+    font-size: 13px;
+    margin-right: 43px;
+    position: relative;
+}
+.xp-urgent-causes .xp-urgent-inner ul li:last-child{
+    margin-right: 0;
+}
+.xp-urgent-causes .xp-urgent-inner ul li:last-child:after{
+    display: none;
+}
+.xp-urgent-causes .xp-urgent-inner ul li:after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 14px;
+    background-color: #dddddd;
+    right: -24px;
+    top: 6px;
+}
+.xp-urgent-causes .xp-urgent-inner ul li strong{
+    font-size: 18px;
+    margin-left: 3px;
+}
+.xp-urgent-causes .xp-urgent-inner a{
+    border: 2px solid;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 53px;
+    padding: 15px 46px;
+    text-transform: uppercase;
+}
+.xp-urgent-causes .xp-urgent-inner a:hover{
+    color: #fff;
+}
+.xp-causes-inner {
+    text-align: right;
+}
+.xp-causes-inner .xp-causes-detail:last-child{
+    margin-bottom: 0;
+}
+.xp-causes-detail{
+    margin-bottom: 10px;
+}
+.xp-causes-detail .xp-image-holder{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.xp-causes-detail .xp-text-box{
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 127px;
+    right: 5%;
+    padding: 0 30px;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 179px;
+    transition: all 0.5s ease-in-out; 
+    cursor: pointer;
+}
+.xp-causes-detail .xp-text-box h3 a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.xp-causes-detail .xp-text-hove{
+    background-color: rgba(104, 178, 13, 0.9);
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; 
+}
+.xp-causes-detail .xp-text-hove a{
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 13px 25px;
+    text-transform: uppercase;
+}
+.xp-causes-detail .xp-image-holder:hover .xp-text-box{
+    right: -90%;
+    transition: all 0.5s ease-in-out; 
+}
+.xp-causes-detail .xp-image-holder:hover .xp-text-hove{
+    left: 0;
+    transition: all 0.5s ease-in-out; 
+}
+.xp-urgent-causes-pic{
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+/*===============================
+    Conting Information Strat
+===============================*/
+.xp-counter{
+    padding-bottom: 0;
+    padding-top: 110px;
+}
+.xp-counter .xp-counter-inner .xp-image-holder{
+    position: relative;
+}
+.xp-counter-inner .xp-text-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.xp-counter-inner .xp-text-box h3{
+    font-size: 38px;
+    color: #fff;
+}
+.xp-counter-inner .xp-text-box p{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+/*===============================
+       Testimonial Strat
+===============================*/
+.xp-testimonila{ 
+    position: relative;
+}
+.xp-testimonila .xp-ovrlay{
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.swiper-container {
+    width: 35%;
+    float: left;
+}
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+.gallery-top {
+    float: right;
+    width: 65%;
+}
+.gallery-thumbs {
+    height: 150px;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: 0;
+}
+.gallery-thumbs .swiper-slide {
+    height: 100%;
+    width: 31% !important;
+    opacity: 1;
+    opacity: 1;
+}
+.gallery-thumbs .swiper-slide-active {
+    border: 5px solid;
+    position: relative;
+    float: right;
+
+}
+.gallery-thumbs .swiper-wrapper{
+    transform: none !important;
+}
+.xp-testimonila-inner .xp-slide-text {
+    margin-top: 40px;
+}
+.xp-testimonila-inner .swiper-slide .xp-slide-text-innr{
+    float: left;
+}
+.xp-testimonila-inner .swiper-slide .xp-slide-text-innr .xp-text-box{
+    float: left;
+    margin-left: 40px;
+    text-align: right;
+    vertical-align: middle;
+}
+.xp-testimonila-inner .swiper-slide .xp-slide-text-innr .xp-text-box span{
+    color: #fff;
+    font-size: 13px;
+}
+.xp-testimonila-inner .swiper-slide .xp-slide-text-innr .xp-text-box h3{
+    color: #fff;
+    font-size: 26px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.xp-testimonila-inner .swiper-slide .xp-paragrap{
+    float: left;
+    margin-left: 50px;
+     width: 60%;
+    border-left: 4px solid;
+    padding-left: 30px;
+}
+.xp-testimonila-inner .swiper-slide .xp-paragrap p{
+    color: #fff;
+    font-size: 15px;
+}
+/*===============================
+       Shop Product Strat
+===============================*/
+.xp-xp-shop-product-inner .xp-text-box{
+    border: 4px solid #fcfcfc;
+    margin: -25px auto 0;
+    padding-top: 60px;
+    position: relative;
+    text-align: center;
+    width: 240px;
+    z-index: 1;
+}
+.xp-xp-shop-product-inner .xp-text-box h4 a{
+    font-size: 15px;
+    color: #454545;
+    font-weight: 600;
+    display: block;
+}
+.xp-xp-shop-product-inner .xp-text-box ul li{
+    display: inline-block;
+}
+.xp-xp-shop-product-inner .xp-text-box ul li a{
+    font-size: 12px;
+}
+.xp-xp-shop-product-inner .xp-text-box .xp-price {
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    padding: 13px 40px 10px;
+    margin-top: 29px;
+}
+.xp-xp-shop-product-inner .xp-text-box .xp-price span{
+    font-size: 11px;
+    text-decoration: line-through;
+    margin-left: 5px;
+    color: #ffffff;
+}
+/*===============================
+        Clint Strat
+===============================*/
+.xp-clint{
+    background-color: #f6f6f6
+}
+.xp-clint-innr .clints-sponser{
+    text-align: center;
+    background-color: #fff;
+    padding: 60px 0;
+}
+.xp-clint-innr .owl-theme .owl-controls{
+    margin: 0;
+}
+.xp-clint-innr .owl-theme .owl-controls .owl-buttons div {
+    background: #222222 none repeat scroll 0 0;
+    border-radius:  0;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+    opacity: 1;
+    padding: 13px 19px;
+    transition: all 0.5s ease-in-out;
+}
+.xp-clint-innr .owl-prev{
+    position: absolute;
+    bottom: 85px;
+    left: -99px;
+}
+.xp-clint-innr .owl-next{
+    position: absolute;
+    bottom: 85px;
+    right: -99px;
+}
+/*===============================
+       Home 3 Header Strat
+===============================*/
+.xp-vresion-three-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.xp-vresion-three-header .xp-top-header{
+    background-color: transparent;
+}
+.xp-vresion-three-header .xp-top-header .xp-top-location{
+    float: none;
+    padding: 33px 0;
+}
+.xp-cart-item{
+    padding-bottom: 23px;
+    padding-top: 23px;
+    float: right;
+}
+.xp-cart-item .xp-image-holder{
+    border: 2px solid #d4d4d4;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.xp-cart-item .xp-image-holder a{
+    border-radius: 50px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 11px;
+    height: 21px;
+    position: absolute;
+    right: -10px;
+    text-align: center;
+    top: 12px;
+    width: 21px;
+}
+.xp-cart-item .xp-text-box{
+    float: left;
+    padding-top: 16px;
+    padding-left: 19px;
+}
+.xp-cart-item .xp-text-box p{
+    color: #fff;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+}
+.xp-last-heade-inner{
+    background-color: rgba(0, 0, 0, 0.70);
+    position: relative;
+}
+.xp-last-heade-inner:after{
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.70);
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.xp-vresion-three-header .xp-last-header .xp-logo {
+    padding: 34px 0 34px 61px;
+}
+.xp-vresion-three-header .xp-navigation .nav li a{
+    color: #fff;
+}
+/*===============================
+       Home 3 Banner Strat
+===============================*/
+.xp-versionthree-banner .xp-text-box h1 {
+    color: #ffffff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.xp-versionthree-banner .xp-text-box a{
+    margin-bottom: 0;
+    margin-top: 38px;
+}
+.xp-versionthree-banner .xp-text-box strong{
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.xp-inner-banner.xp-versionthree-banner .xp-text-box {
+    height: 100%;
+    left: 0;
+    padding-top: 204px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+/*===============================
+      Upcoming Event Strat
+===============================*/
+.xp-upcoming-event{
+    background-color: #fafafa;
+    margin: -29px auto 0;
+    padding: 25px 0;
+    position: relative;
+    width: 830px;
+    z-index: 1;
+}
+.xp-upcoming-text{
+    padding-left: 70px;
+    padding-bottom: 23px;
+    padding-top: 45px;
+}
+.xp-upcoming-text h3 a{
+    color: #282828;
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-top: 26px;
+}
+.xp-upcoming-text ul li{
+    display: inline-block;
+    color: #555555;
+    font-size: 12px;
+    margin-right: 40px;
+    position: relative;
+}
+.xp-upcoming-text ul li:last-child{
+    margin-right: 0;
+}
+.xp-upcoming-text ul li:last-child:after{
+    display: none;
+}
+.xp-upcoming-text ul li:after{
+    position: absolute;
+    content: "";
+    background-color: #dddddd;
+    width: 2px;
+    height: 10px;
+    right: -20px;
+    top: 4px;
+}
+.xp-event-countdown {
+    padding-right: 25px;
+}
+.xp-event-countdown .event-timer ul li{
+    text-align: center;
+    padding: 24px 0;
+    background:  url(../images/countdown-img1.png) no-repeat;
+    position: relative;
+    background-size: cover;
+}
+.xp-event-countdown .event-timer ul li:after{
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.70);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.xp-event-countdown .event-timer ul li.days:after{
+    background-color: rgba(0, 0, 0, 0.90);
+}
+.xp-event-countdown .event-timer ul li.seconds:after{
+    background-color: rgba(0, 0, 0, 0.90);
+}
+.xp-event-countdown .event-timer ul li.hours{
+    background:  url(../images/countdown-img2.png) no-repeat;
+    background-size: cover;
+}
+.xp-event-countdown .event-timer ul li.minutes{
+    background:  url(../images/countdown-img3.png) no-repeat;
+    background-size: cover;
+}
+.xp-event-countdown .event-timer ul li.seconds{
+    background:  url(../images/countdown-img4.png) no-repeat;
+    background-size: cover;
+}
+.xp-event-countdown .event-timer ul li span{
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    font-family: "Archivo Black",sans-serif;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+.xp-event-countdown .event-timer ul li strong{
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+/*===============================
+      Feature Strat
+===============================*/
+.xp-feature{
+    padding-bottom: 0;
+}
+.xp-feature-hedding{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.xp-feature-hedding  a{
+    text-transform: none;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+}
+.xp-feature-hedding h2{
+    color: #333333;
+    margin: 0 auto;
+    width: 60%;
+    line-height: 45px;
+    padding-top: 16px;
+}
+.xp-feature .xp-feature-left {
+    margin-top: 51px;
+    padding-right: 66px;
+}
+.xp-feature-left .xp-feature-colum .xp-image-holder{
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.xp-feature-left .xp-feature-colum .xp-image-holder .xp-ovrlay{
+    background-color: rgba(255, 255, 255, 0.97);
+    transition: all 0.5s ease-in-out;
+}
+.xp-feature-left .xp-feature-colum .xp-image-holder img{
+    width: 100%;
+    height: 207px;
+}
+.xp-feature-colum .xp-text-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 65px;
+}
+.xp-feature-left .xp-feature-colum .xp-image-holder .xp-text-box img{
+    display: inline-block;
+    margin-top: 9px;
+    vertical-align: top;
+    width: auto;
+    height: auto;
+}
+.xp-feature-colum .xp-text-box .xp-text-box-inner{
+    display: inline-block;
+    margin-left: 30px;
+    width: 75%;
+}
+.xp-feature-colum .xp-text-box .xp-text-box-inner h3 a{
+    display: block;
+    color: #444444;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: "Poppins",sans-serif;
+    padding-bottom: 14px;
+}
+.xp-feature-colum .xp-text-box .xp-text-box-inner .btn {
+    background-color: #222222;
+    border: 2px solid #222222;
+    position: absolute;
+    right: -76px;
+    top: 80px;
+    transform: rotate(-90deg);
+}
+.xp-feature-colum .xp-text-box .xp-text-box-inner .btn:hover{
+    color: #fff;
+}
+.xp-feature-left .xp-feature-colum .xp-image-holder:hover .xp-ovrlay{
+    background-color: rgba(0, 0, 0, 0.90);
+    transition: all 0.5s ease-in-out;
+}
+.xp-feature-left .xp-feature-colum .xp-image-holder:hover .xp-text-box-inner h3 a,
+.xp-feature-left .xp-feature-colum .xp-image-holder:hover .xp-text-box-inner p{
+    color: #fff;
+}
+.xp-feature-left .xp-feature-colum .xp-image-holder:hover .xp-text-box-inner .btn{
+    border: 2px solid
+}
+/*===============================
+       Donaters Help Strat
+===============================*/
+.xp-donaters-help{
+    padding: 110px 0;
+}
+.xp-donaters-help-left .xp-text-box h3{
+    color: #fff;
+    font-size: 28px;
+    padding-bottom: 14px;
+}
+.xp-donaters-help-left .xp-text-box p{
+    color: #fff;
+    line-height: 26px;
+}
+.xp-donaters-help-left .xp-text-box span{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    padding-top: 22px;
+}
+.xp-donaters-help-left .xp-text-box span strong{
+    font-size: 18px;
+}
+.xp-donaters-help-left .xp-text-box a{
+    border: 2px solid #fff; 
+    border-radius: 3px;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    padding: 19px 38px;
+    margin-top: 39px;
+}
+.xp-donaters-help-right .xp-image-holder{
+    position: relative;
+}
+.xp-donaters-help-right .xp-image-holder img{
+    width: 100%;
+}
+.xp-donaters-help-right .xp-text-box{
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 25px 0 52px;
+}
+.xp-donaters-help-right .xp-text-box span{
+    color: #efb508;
+    font-size: 12px;
+}
+.xp-donaters-help-right .xp-text-box h3 a {
+    color: #ffffff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 7px;
+}
+.xp-donaters-help-right .xp-text-box .xp-price {
+    background-color: #ffffff;
+    border-radius: 2px;
+    bottom: -22px;
+    color: #444444;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    left: 16%;
+    padding: 13px 28px;
+    position: absolute;
+}
+.xp-donaters-help-right .owl-carousel .owl-wrapper-outer {
+    padding-bottom: 23px;
+}
+.xp-donaters-help-right .item{
+    padding: 0 5px;
+}
+/*===============================
+     Welfare Programs Strat
+===============================*/
+.xp-welfear-progeam-inner {
+    margin-bottom: 94px;
+}
+.xp-welfear-progeam-inner:last-child {
+    margin-bottom: 0;
+}
+.xp-welfear-progeam-inner .xp-welfare-gride{
+    background-color: #fbfbfb;
+    margin: 40px 0 0 120px;
+    padding: 56px 50px 47px 70px;
+    position: relative;
+    width: 370px;
+    z-index: 1;
+}
+.xp-welfare-gride .xp-image-holder{
+    background-color: #222222;
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    text-align: center;
+}
+.xp-welfare-gride .xp-text-box{
+    padding-top: 26px;
+}
+.xp-welfare-gride .xp-text-box span{
+    color: #444444;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    display: block;
+    padding-top: 40px;
+}
+.xp-welfare-gride .xp-text-box span strong{
+    font-family: "Poppins",sans-serif;
+    font-size: 28px;
+    display: block;
+}
+.xp-welfear-progeam-inner .xp-welfare-colum{
+    position: relative;
+}
+.xp-welfear-progeam-inner .xp-welfare-colum .xp-image-holder img{
+    width: 100%;
+}
+.xp-welfare-colum .xp-text-box{
+    padding-left: 170px;
+    padding-top: 40px;
+    padding-right: 40px;
+}
+.xp-welfare-colum .xp-text-box h3 a{
+    font-size: 24px;
+    text-transform: none;
+    color: #444444;
+    display: block;
+    padding-bottom: 14px;
+    padding-top: 17px;
+}
+.xp-welfare-colum .xp-text-box ul li {
+    color: #555555;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 40px;
+    position: relative;
+}
+.xp-welfare-colum .xp-text-box ul li:last-child::after {
+    display: none;
+}
+.xp-welfare-colum .xp-text-box ul li:last-child {
+    margin-right: 0;
+}
+.xp-welfare-colum .xp-text-box ul li::after {
+    background-color: #dddddd;
+    content: "";
+    height: 10px;
+    position: absolute;
+    right: -20px;
+    top: 4px;
+    width: 2px;
+}
+.xp-welfear-progeam-inner-second .xp-welfare-colum .xp-text-box{
+    padding-left: 0;
+}
+.xp-welfear-progeam-inner-second .xp-welfare-colum .xp-text-box h3 a{
+    width: 75%;
+}
+.xp-welfear-progeam-inner-second .xp-welfare-gride{
+    margin: 40px 0 0 -130px;
+}
+/*===============================
+       Home 4 Strat
+===============================*/
+.xp-version-four-banner{
+    height: 770px;
+    position: relative;
+}
+.xp-version-four-banner .xp-ovrlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.xp-version-four-banner .xp-text-box {
+    padding-top: 0;
+}
+.xp-version-four-banner .xp-text-box h1{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+.xp-version-four-banner .xp-text-box h1 span{
+    margin-left: 5px;
+}
+.xp-version-four-banner .xp-text-box p {
+    width: 39%;
+}
+.xp-version-four-banner .xp-text-box-innr {
+    padding-top: 55px;
+}
+.xp-version-four-banner .xp-serch-point{
+    background-color: rgba(255, 255, 255, 0.10);
+    margin: 50px auto 0;
+    padding: 48px 60px 62px 65px;
+    position: relative;
+    text-align: left;
+    width: 830px;
+}
+.xp-version-four-banner .xp-serch-point p{
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    width: auto;
+    padding-bottom: 25px;
+}
+.xp-version-four-banner .xp-serch-point select{
+    background: #fff url(../images/select-arrow.png) 95% center no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;;
+    border: none;
+    color: #8c8c8c;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    height: 50px;
+    width: 238px;
+    padding-left: 30px;
+    vertical-align: top;
+}
+.xp-version-four-banner .xp-serch-point input[type="text"]{
+    background-color: #fff;
+    border: none;
+    color: #8c8c8c;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    height: 50px;
+    width: 402px;
+    padding-left: 30px;
+    vertical-align: top;
+}
+.xp-version-four-banner .xp-serch-point input[type="submit"]{
+    border: medium none;
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: -4px;
+    padding: 17.7px 23px;
+}
+.xp-version-four-banner .xp-serch-point .xp-search-causes a{
+    background-color: #222222;
+    border-radius: 0;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    left: -136px;
+    margin: 0;
+    padding: 22px 37px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 69px;
+    transform: rotate(-90deg)
+}
+.xp-version-four-banner .xp-serch-point .xp-browse a {
+    background-color: #222222;
+    border-radius: 0;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding: 22px 36px;
+    position: absolute;
+    right: -136px;
+    text-transform: uppercase;
+    top: 69px;
+    transform: rotate(-90deg);
+}
+.version-four{
+    background-color: #111111;
+}
+.version-four .hedding h2{
+    color: #fff;
+}
+.version-four .hedding::after,
+.version-four .hedding::before,
+.version-four .hedding p::after,
+.version-four .hedding p::before{
+    background-color: #444444;
+}
+/*===============================
+      Services Tow Strat
+===============================*/
+.xp-services-tow{
+    padding: 110px 0 80px;
+}
+.xp-services-tow-inner{
+    text-align: right;
+    border: 9px solid #1a1a1a;
+    padding: 40px 58px 37px;
+    margin-bottom: 30px;
+}
+.xp-services-tow-inner .xp-image-holder a{
+    background-color: #1a1a1a;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    display: inline-block;
+}
+.xp-services-tow-inner .xp-text-box {
+    margin-top: 22px;
+}
+.xp-services-tow-inner .xp-text-box h3 a{
+    display: block;
+    color: #eeeeee;
+    font-size: 17px;
+    padding-bottom: 15px;
+}
+.xp-services-tow-inner .xp-text-box p{
+    color: #bbbbbb;
+}
+/*===============================
+      Urgent Causes2 Strat
+===============================*/
+.xp-urgent-causes2{
+    background-color: #0c0c0c;
+    padding-bottom: 92px;
+}
+.xp-urgent-causes2 .xp-urgent-inner h3,
+.xp-urgent-causes2 .xp-urgent-inner p,
+.xp-urgent-causes2 .xp-urgent-inner ul li,
+.xp-welfare-project-version4 .xp-text-box ul li,
+.xp-welfare-project-version4 .xp-text-box h3 a,
+.xp-welfare-project-version4 .xp-text-box p{
+    color: #fff;
+}
+.xp-clint-version4{
+    background-color: #0c0c0c;
+}
+.xp-clint-version4 .xp-clint-innr .clints-sponser{
+    background-color: #141414;
+}
+.xp-clint-version4 .clints-sponser.clint-two-sponser{
+    background-color: #191919;
+}
+/*===============================
+      Home 5 Strat
+===============================*/
+.xp-version-five-header .xp-logo{
+    text-align: center;
+    padding: 40px 0 0;
+}
+.xp-version-five-header .xp-navigation {
+    text-align: center;
+}
+.xp-version-five-header .xp-navigation .navbar-default{
+    margin-right: 0;
+    padding: 14px 0 38px;
+}
+.xp-version-five-header .xp-navigation  .navbar-nav {
+    float: none;
+}
+.xp-version-five-header .xp-navigation .navbar-nav > li {
+    float: none;
+    display: inline-block;
+}
+.xp-home5-banner-inner .xp-image-holder{
+    position: relative;
+}
+.xp-home5-banner-inner .xp-home5-banner-text{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 32%;
+    background-color: #fff;
+}
+.xp-home5-banner-text .xp-text-box .xp-disease{
+    padding: 56px 61px;
+}
+.xp-home5-banner-text .xp-text-box .xp-disease span{
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 11px;
+}
+.xp-home5-banner-text .xp-text-box .xp-disease h3{
+    font-size: 17px;
+    padding-bottom: 11px;
+}
+.xp-home5-banner-text .xp-text-box .xp-disease ul{
+    margin-bottom: 24px;
+}
+.xp-home5-banner-text .xp-text-box .xp-disease ul li a {
+    color: #555555;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.xp-home5-banner-text .xp-text-box .xp-disease ul li a i{
+    margin-right: 6px;
+}
+.xp-home5-banner-text .xp-text-box .xp-donat-info{
+    background-color: #222222;
+    transition: all 0.5s ease-in-out 0s;
+}
+.xp-home5-banner-text .xp-text-box .xp-donat-info ul li {
+    float: left;
+    padding: 26px 0;
+    position: relative;
+    text-align: center;
+    width: 50%;
+}
+.xp-home5-banner-text .xp-text-box .xp-donat-info ul li::after {
+    background-color: #ffffff;
+    content: "";
+    height: 20px;
+    position: absolute;
+    right: 2px;
+    top: 40px;
+    width: 1px;
+}
+.xp-home5-banner-text .xp-text-box .xp-donat-info ul li:last-child::after {
+    display: none;
+}
+.xp-home5-banner-text .xp-text-box .xp-donat-info ul li span {
+    color: #ffffff;
+    display: block;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    padding-bottom: 6px;
+}
+.xp-home5-banner-text .xp-text-box .xp-donat-info ul li h3 {
+    transition: all 0.5s ease-in-out 0s;
+    color: #fff;
+    font-size: 20px;
+
+}
+.xp-home5-banner-text .owl-theme .owl-controls {
+    margin-top: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 100%;
+    padding-right: 30px;
+    padding-top: 19px;
+}
+.xp-home5-banner-text .owl-theme .owl-controls .owl-page span {
+    background: #dbdbdb none repeat scroll 0 0;
+    border-radius: 0;
+    display: block;
+    height: 7px;
+    margin: 0 0 0 4px;
+    opacity: 1;
+    width: 7px;
+    transition: all 0.5s ease-in-out;
+}
+/*===============================
+     Donat Charity Strat
+===============================*/
+.xp-donat-charity{
+    margin-top: 22px;
+}
+.xp-donat-charity-innr{
+    text-align: center; 
+}
+.xp-donat-charity-innr .xp-text-box{
+    padding: 70px 60px 62px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.xp-donat-charity-innr .xp-text-box h3 a{
+    font-size: 20px;
+    display: block;
+    padding-top: 31px;
+    padding-bottom: 15px;
+}
+.xp-donat-charity-innr .xp-text-box span{
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    display: block;
+    padding-top: 16px;
+}
+.xp-donat-charity-innr .xp-text-box span strong{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.xp-donat-charity-innr .xp-text-hover{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(113, 182, 27, 0.85);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.xp-donat-charity-innr .xp-text-hover .btn2{
+    border: 2px solid #fff;
+    color: #fff;
+}
+.xp-donat-charity-innr .xp-text-box:hover .xp-text-hover{
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.xp-charity-fundraising-version5{
+    width: 100%;
+}
+.xp-shop-product-main{
+    padding-top: 0;
+}
+/*===============================
+     Our Causes Strat
+===============================*/
+.xp-all-inner-banner .xp-ovrlay {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+.xp-all-inner-banner {
+    height: 580px;
+    position: relative;
+}
+.xp-all-inner-banner  .xp-text-box-innr {
+    padding-top: 218px;
+}
+.xp-all-inner-banner .xp-text-box-innr h1{
+    font-size: 46px;
+    margin-bottom: 3px;
+}
+.xp-all-inner-banner .xp-text-box-innr p{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins",sans-serif;
+}
+.xp-all-inner-banner .xp-text-box-innr .breadcrumb {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+    display: inline-block;
+    padding: 15px 35px;
+    margin-top: 43px;
+}
+.xp-all-inner-banner .xp-text-box-innr .breadcrumb li{
+    color: #fff;
+    font-size: 13px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-all-inner-banner .xp-text-box-innr .breadcrumb > li + li::before {
+    color: #fff;
+    content: "-";
+    padding: 0 7px;
+}
+.xp-all-inner-banner .xp-text-box-innr .breadcrumb li a{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-our-cause .xp-recent-cause-inner{
+    margin-bottom: 50px;
+}
+.xp-pagination{
+    text-align: center;
+    margin-top: 20px;
+}
+.xp-pagination ul li{
+    display: inline-block;
+    font-size: 13px;
+    color: #303030;
+}
+.xp-pagination ul li:first-child a,
+.xp-pagination ul li:last-child a{
+    background-color: #222222;
+}
+.xp-pagination ul li a{
+    font-size: 13px;
+    color: #303030;
+    display: inline-block;
+    padding: 28px 25px;
+}
+.xp-pagination ul li a:hover{
+    color: #fff;
+}
+.xp-pagination ul li a i{
+    font-size: 16px;
+    color: #fff;
+}
+/*===============================
+     Our Causes Detail Strat
+===============================*/
+.our-causes-detail-support .xp-text-box{
+    background-color: #fafafa;
+    width: 790px;
+    margin: -35px auto 0;
+    position: relative;
+    z-index: 1;
+    padding: 64px 75px 30px 80px;
+}
+.our-causes-detail-support .xp-text-box .xp-text-box-inner .btn{
+    position: absolute;
+    top: -20px;
+}
+.our-causes-detail-support .xp-text-box .xp-text-box-inner span{
+    color: #555555;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px dashed #686867;
+    padding-bottom: 24px;
+    margin-bottom: 25px;
+    padding-top: 9px;
+}
+.our-causes-detail-support .xp-text-box .xp-theodore{
+    display: inline-block;
+    margin-right: 42px;
+    vertical-align: middle;
+}
+.our-causes-detail-support .xp-text-box .xp-theodore ul li{
+    color: #444;
+    font-size: 14px;
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+.our-causes-detail-support .xp-text-box .xp-theodore ul li:last-child{
+    margin-right: 0;
+}
+.our-causes-detail-support .xp-text-box .xp-theodore ul li:last-child:after{
+    display: none;
+}
+.our-causes-detail-support .xp-text-box .xp-theodore ul li:after{
+    position: absolute;
+    content: "";
+    background-color: #a9a9a9;
+    right: -22px;
+    top: 7px;
+    width: 2px;
+    height: 14px;
+}
+.our-causes-detail-support .xp-text-box .xp-theodore ul li strong{
+    font-size: 18px;
+}
+.our-causes-detail-support .xp-text-box .xp-donat-persntage {
+    left: -6px;
+}
+.xp-causes-detail-contant {
+    margin-top: 44px;
+}
+.xp-causes-detail-contant p{
+    padding: 19px 0;
+}
+.xp-causes-quote{
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 52px 100px 49px;
+    margin-top: 28px;
+}
+.xp-causes-quote p{
+    font-style: italic;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 13px;
+    padding-bottom: 17px;
+    position: relative;
+    padding-left: 38px;
+}
+.xp-causes-quote p:after{
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 70px;
+    left: 0;
+    top: 7px;
+}
+.xp-causes-gallery{
+    margin-top: 35px;
+}
+.xp-causes-gallery-inner{
+    margin-top: 15px;
+}
+.xp-causes-gallery-inner .xp-image-holder{
+    position: relative;
+    overflow: hidden;
+}
+.xp-causes-gallery-inner .xp-text-hover{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.70);
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+.xp-causes-gallery-inner .xp-text-hover p{
+    color: #fff;
+    font-size: 17px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+.xp-causes-gallery-inner .xp-image-holder:hover .xp-text-hover{
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.xp-causes-gallery p{
+    padding-top: 43px;
+}
+.xp-causes-tags{
+    width: 673px;
+    margin: 74px auto 0;
+}
+.xp-causes-tags h3{
+    font-size: 16px;
+    display: inline-block;
+}
+.xp-causes-tags ul{
+    display: inline-block;
+    margin-left: 30px;
+}
+.xp-causes-tags ul li{
+    display: inline-block;
+}
+.xp-causes-tags ul li a{
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #fff;
+    background-color: #222222;
+    display: inline-block;
+    padding: 12px 22px 11px;
+}
+.xp-causesdetail-donors{
+    padding-top: 102px; 
+}
+.xp-causesdetail-donors span{
+    color: #888888;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-causesdetail-donors h3{
+    font-size: 30px;
+    padding-top: 8px;
+}
+.xp-causesdetail-donors .xp-donaters-help-right{
+    margin-top: 30px;
+}
+.xp-causesdetail-donors .xp-donaters-help-right .xp-text-box .xp-price{
+    background-color: #eeeeee;
+}
+/*===============================
+      Side Bar Strat
+===============================*/
+.xp-widget{
+    margin-bottom: 67px;
+}
+.xp-widget h2{
+    font-size: 20px;
+    font-family: "Poppins",sans-serif;
+    position: relative;
+    margin-bottom: 34px;
+}
+.xp-widget h2::before {
+    content: "";
+    height: 5px;
+    position: absolute;
+    right: 79px;
+    top: 13px;
+    width: 2px;
+}
+.xp-widget h2::after {
+    content: "";
+    height: 5px;
+    position: absolute;
+    right: 79px;
+    top: 0;
+    width: 2px;
+}
+.xp-widget h2 span::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    right: 27px;
+    top: 8px;
+    width: 48px;
+}
+.xp-recent-colum .xp-recent-date{
+    float: left;
+    text-align: center;
+    border-radius: 2px;
+    padding: 20px 13px 17px;
+    margin-right: 20px;
+}
+.xp-recent-colum {
+    margin-bottom: 19px;
+}
+.xp-recent-colum:last-child{
+    margin-bottom: 0;
+}
+.xp-recent-colum .xp-recent-date h3{
+    color: #fff;
+    font-size: 25px;
+    line-height: 21px;
+}
+.xp-recent-colum .xp-recent-date span{
+    color: #000000;
+    font-size: 11px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-recent-colum .xp-text-box{
+    float: left;
+    width: 59%;
+    padding-top: 3px;
+}
+.xp-recent-colum .xp-text-box span{
+    font-size: 12px;
+}
+.xp-recent-colum .xp-text-box h4 a{
+    font-size: 13px;
+    display: block;
+    color: #232323;
+    padding-top: 6px;
+}
+.xp-categories-inner {
+    padding: 43px 35px 46px;
+}
+.xp-categories-inner ul li{
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.xp-categories-inner ul li:last-child{
+    margin-bottom: 0;
+}
+.xp-categories-inner ul li a{
+    color: #444444;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    padding-top: 9px;
+    display: inline-block;
+}
+.xp-categories-inner ul li span{
+    float: right;
+    background-color: #222222;
+    color: #fff;
+    font-size: 10px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 11px;
+    transition: all 0.5s ease-in-out;
+}
+.xp-popular-inner .xp-image-holder{
+    position: relative;
+    margin-bottom: 20px;
+}
+.xp-popular-inner .xp-image-holder:last-child{
+    margin-bottom: 0;
+}
+.xp-popular-inner .xp-text-box{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+}
+.xp-popular-inner .xp-text-box p{
+    font-size: 12px;
+}
+.xp-popular-inner .xp-text-box h3 a{
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 10px;
+    display: block;
+}
+.xp-charity-video-inner .xp-image-holder{
+    position: relative;
+}
+.xp-charity-video-inner .xp-mouse-hover{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+.xp-charity-video-inner .xp-text-box{
+    background-color: #fbfbfb;
+    margin: -25px auto 0;
+    padding: 37px 10px 33px;
+    position: relative;
+    text-align: center;
+    width: 232px;
+    z-index: 1;
+}
+.xp-charity-video-inner .xp-text-box h3 a{
+    font-size: 13px;
+    font-weight: 700;
+    color: #444444;
+    padding-bottom: 10px;
+    display: block;
+    text-transform: none;
+}
+.xp-charity-video-inner .xp-text-box p{
+    font-size: 12px;
+}
+.xp-tags-cloud-inner {
+    margin: 0 auto;
+    width: 200px;
+}
+.xp-tags-cloud-inner ul li{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.xp-tags-cloud-inner ul li a{
+    background-color: #222222;
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 13px 21px;
+}
+.xp-flicker-widget{
+    padding-top: 37px;
+}
+.xp-flicker-widget-inner ul li{
+    float: left;
+    width: 31.7%;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+.xp-flicker-widget-inner ul li:nth-child(3n+3){
+    margin-right: 0;
+}
+/*===============================
+       Over Events Strat
+===============================*/
+.xp-event-main .xp-events-grid {
+    float: none;
+    padding: 0;
+    width: auto;
+    margin-bottom: 50px;
+}
+/*===============================
+    Over Events Detail Strat
+===============================*/
+.xp-our-events-inner .xp-text-box .xp-text-box-inner span i{
+    margin-right: 10px;
+}
+.xp-our-events-inner .xp-text-box .xp-text-box-inner ul li{
+    font-size: 12px;
+    font-family: "Arimo",sans-serif;
+    color: #555;
+}
+.xp-our-events-inner .xp-text-box .xp-text-box-inner ul li::after {
+    background-color: #dddddd;
+    content: "";
+    height: 10px;
+    position: absolute;
+    right: -22px;
+    top: 3px;
+    width: 2px;
+}
+.xp-our-events-inner .xp-event-socail{
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+}
+.xp-our-events-inner .xp-event-socail ul li{
+    display: inline-block;
+}
+.xp-our-events-inner .xp-event-socail ul li a{
+    border: 2px solid;
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 7px;
+    display: inline-block;
+    font-size: 11px;
+}
+.xp-our-events-inner .xp-event-socail ul li a:hover{
+    color: #fff;
+    border: 2px solid;
+}
+.xp-contact-map{
+    height: 350px;
+    margin-top: 44px;
+}
+/*===============================
+    Over Blog Strat
+===============================*/
+.xp-our-blog .xp-charity-news-inner{
+    margin-bottom: 85px;
+}
+/*===============================
+    Over Blog Detail Strat
+===============================*/
+.xp-blog-detail .our-causes-detail-support .xp-text-box {
+    padding: 55px 75px 30px 80px;
+}
+.xp-blog-detail .our-causes-detail-support .xp-date{
+    text-align: center;
+    border-radius: 2px;
+    padding: 33px 15px 31px;
+    position: absolute;
+    top: -44px;
+    right: 40px;
+}
+.xp-blog-detail .our-causes-detail-support .xp-date h3{
+    color: #fff;
+    font-size: 25px;
+}
+.xp-blog-detail .our-causes-detail-support .xp-date p{
+    color: #000000;
+    font-family: "Poppins",sans-serif;
+    font-size: 11px;
+}
+.xp-blog-detail .our-causes-detail-support .xp-theodore{
+    margin-bottom: 11px;
+}
+.xp-blog-detail .xp-causes-gallery p {
+    padding-top: 6px;
+}
+/*===============================
+      About Authore Strat
+===============================*/
+.xp-blog-detail .xp-authore {
+    background-color: #fafafa;
+    padding: 38px 62px;
+    margin-top: 105px;
+    margin-bottom: 40px;
+}
+.xp-blog-detail .xp-authore .xp-text-box{
+    float: left;
+    text-align: right;
+    width: 73%;
+    padding-top: 19px;
+}
+.xp-authore .xp-text-box .xp-event-socail{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+}
+.xp-authore .xp-text-box .xp-event-socail ul li{
+    display: inline-block;
+}
+.xp-authore .xp-text-box .xp-event-socail ul li a{
+    border: 2px solid;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 11px;
+    height: 36px;
+    padding-top: 7px;
+    text-align: center;
+    width: 36px;
+}
+.xp-authore .xp-text-box .xp-event-socail ul li a:hover{
+    border: 2px solid;
+    color: #fff;
+}
+.xp-blog-detail .xp-authore .xp-text-box h3 {
+    display: inline-block;
+    vertical-align: middle;
+}
+.xp-blog-detail .xp-authore .xp-text-box h3 a{
+    color: #444444;
+    font-size: 17px;
+    text-transform: none;
+    font-weight: 600;
+}
+.xp-blog-detail .xp-authore .xp-text-box p {
+    padding-top: 16px;
+}
+.xp-blog-detail .xp-authore .xp-image-holder{
+    float: right;
+    margin-left: 50px;
+}
+/*===============================
+      Post Comments Strat
+===============================*/
+.xp-post-comments{
+    margin-top: 31px;
+    margin-bottom: 40px;
+}
+.xp-post-comments span{
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-post-comments h3{
+    font-size: 30px;
+    margin-top: 9px;
+    margin-bottom: 33px;
+}
+.xp-post-comments-inner{
+    background-color: #fafafa;
+    padding: 39px 50px;
+    margin-top: 10px; 
+}
+.xp-post-comments-inner .xp-image-holder{
+    float: left;
+    position: relative;
+    margin-right: 40px;
+}
+.xp-post-comments-inner .xp-image-holder a{
+    color: #fff;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 22px 5px;
+    display: inline-block;
+    position: absolute;
+    left: 17px;
+    bottom: -14px;
+}
+.xp-post-comments-inner .xp-text-box{
+    float: left;
+    width: 77%;
+    padding-top: 17px;
+}
+.xp-post-comments-inner .xp-text-box h4{
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.xp-post-comments-inner .xp-text-box h4 a{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.xp-post-comments-inner .xp-text-box span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.xp-post-comments-inner .xp-text-box ul{
+    display: inline-block;
+    float: right;
+}
+.xp-post-comments-inner .xp-text-box ul li{
+    display: inline-block;
+}
+.xp-post-comments-inner .xp-text-box ul li a{
+    font-size: 12px;
+}
+.xp-post-comments-inner .xp-text-box  p {
+    padding-top: 17px;
+}
+/*===============================
+      Leave Comments Strat
+===============================*/
+.xp-leave-comments{
+    margin-top: 32px;
+}
+.xp-leave-comments span{
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-leave-comments h3{
+    font-size: 30px;
+    margin-top: 8px;
+}
+.xp-leave-comments form{
+    margin-top: 30px;
+}
+.xp-leave-comments .form-group{
+    margin-bottom: 10px;
+}
+.xp-leave-comments .form-group input[type="text"]{
+    border: none;
+    background-color: #fafafa;
+    height: 55px;
+    width: 100%;
+    padding-left: 43px;
+    color: #555555;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-leave-comments .form-group textarea{
+    border: none;
+    background-color: #fafafa;
+    height: 190px;
+    width: 100%;
+    padding: 35px;
+    color: #555555;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+}
+.xp-leave-comments .form-group .xp-ratting-select{
+    padding: 15px 43px;
+}
+.xp-leave-comments .form-group .xp-ratting-select p{
+    display: inline-block;
+    color: #555555;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    vertical-align: middle;
+}
+.xp-leave-comments .form-group .xp-ratting-select ul{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 44px;
+}
+.xp-leave-comments .form-group .xp-ratting-select ul li a{
+    font-size: 12px;
+}
+/*===============================
+      Our Product Strat
+===============================*/
+.xp-our-product .xp-xp-shop-product-inner{
+    margin-bottom: 46px;
+}
+/*===============================
+      Product Detail Strat
+===============================*/
+.xp-product-detail .xp-text-box-inner .xp-price{
+    border-radius: 2px;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Poppins",sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 13px 40px 10px;
+    position: absolute;
+    top: -24px;
+}
+.xp-product-detail .xp-text-box-inner .xp-price span {
+    border-bottom: medium none;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 11px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    padding: 0;
+    text-decoration: line-through;
+    vertical-align: middle;
+}
+.xp-product-detail .xp-text-box-inner .count-reviews{
+    margin-top: 9px;
+    border-bottom: 1px dashed #6c6c6b;
+    padding-bottom: 34px;
+}
+.xp-product-detail .xp-text-box-inner .count-reviews ul{
+    display: inline-block;
+}
+.xp-product-detail .xp-text-box-inner .count-reviews ul li{
+    display: inline-block;
+}
+.xp-product-detail .xp-text-box-inner .count-reviews ul li a{
+    font-size: 12px;
+}
+.xp-product-detail .xp-text-box-inner .count-reviews p{
+    display: inline-block;
+    color: #666666;
+    font-size: 13px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 400;
+    margin-left: 13px;
+}
+.xp-related-product {
+    margin-top: 46px;
+    margin-bottom: 37px;
+}
+.xp-related-product span{
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+}
+.xp-related-product h3{
+    font-size: 30px;
+    margin-top: 9px;
+}
+.xp-related-product .xp-shop-product{
+    margin:  31px -15px 0;
+}
+.xp-related-product .xp-shop-product .item{
+    padding: 0 15px;
+}
+.xp-quntity{
+    margin-top: 25px;
+}
+/*---quantity css---*/
+.sp-quantity {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+.sp-minus {
+    width:50px;
+    height:45px;
+    background-color: #f0f0f0;
+    float:left;
+    text-align:center;
+    margin-right: 5px;
+}
+.sp-input {
+    width:90px;
+    height:45px;
+    background-color: #f0f0f0;
+    float:left;
+    margin-right: 5px;
+}
+.sp-plus {
+    width:50px;
+    height:45px;
+    background-color: #f0f0f0;
+    float:left;
+    text-align:center;
+}
+.sp-input input {
+    width:90px;
+    height:45px;
+    text-align:center;
+    background-color: #f0f0f0;
+    color: #404040;
+    border: none;
+}
+.sp-minus a, .sp-plus a {
+    color: #404040;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+    padding: 7px 0 0;
+    width: 100%;
+}
+.xp-quntity .xp-add-cart{
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+}
+/*---swiper-slide css---*/
+.xp-product-detail .swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+.xp-product-detail .gallery-top {
+    height: 570px;
+}
+.xp-product-detail .gallery-top {
+    width: 100% !important;
+}
+.xp-product-detail .gallery-top .swiper-slide{
+    width: 100% !important;
+}
+.xp-product-detail .gallery-thumbs {
+    box-sizing: border-box;
+    height: 91px;
+    margin-top: -2px;
+    padding: 0;
+    position: absolute;
+    right: 101px;
+    width: 310px;
+    z-index: 2;
+}
+.xp-product-detail .gallery-thumbs .swiper-slide {
+    width: 30%;
+    height: 100%;
+    opacity: 1;
+    margin-right: 15px !important;
+}
+.xp-product-detail .gallery-thumbs .swiper-slide-active{
+    border: 3px solid;
+}
+/*===============================
+         Cart Strat
+===============================*/
+.xp-cart-table {
+    margin-bottom: 61px;
+}
+.xp-cart-table table{
+    width: 100%;
+}
+.xp-cart-table table thead tr th{
+    font-size: 15px;
+    color: #323131;
+    font-family: "Poppins",sans-serif;
+    text-transform: uppercase;
+    padding: 19px 57px;
+}
+.xp-cart-table table thead tr th:nth-child(2n+2){
+    background-color: #f5f5f5;
+}
+.xp-cart-table table tbody tr td{
+    color: #666666;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins",sans-serif;
+    padding: 19px 57px;
+}
+.xp-cart-table table tbody tr td .input-group {
+    width: 28%;
+}
+.xp-cart-table table tbody tr td .input-group .form-control{
+    border: medium none;
+    border-radius: 0;
+    box-shadow: inherit;
+    color: #444444;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    vertical-align: middle;
+    padding-top: 15px;
+}
+.xp-cart-table table tbody tr td .input-group-addon{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 11px;
+    color: #8c8c8c;
+}
+.xp-cart-table table tbody tr td .input-group-addon a{
+    font-size: 11px;
+    color: #8c8c8c;
+    display: block;
+    margin: 0 0 -5px;
+}
+.xp-cart-table table tbody tr td .xp-image-holder{
+    float: left;
+    margin-right: 35px;
+}
+.xp-cart-table table tbody tr td .xp-text-box{
+    float: left;
+    padding-top: 20px;
+}
+.xp-cart-table table tbody tr td .xp-text-box ul li{
+    display: inline-block;
+}
+.xp-cart-table table tbody tr td .xp-text-box ul li  a{
+    font-size: 12px;
+    color: #1193d4;
+}
+.xp-cart-table table tbody tr td .xp-text-box h3 a{
+    color: #454545;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 600;
+}
+.xp-cart-table table tbody tr td.xp-price{
+    color: #1193d4;
+}
+.xp-cart-discount{
+    background-color: #fbfbfb;
+    padding: 57px 70px;
+    text-align: center;
+}
+.xp-cart-discount h3 {
+    font-size: 20px;
+    padding-bottom: 4px;
+}
+.xp-cart-discount p{
+    font-size: 13px;
+}
+.xp-cart-discount form{
+    margin-top: 33px;
+}
+.xp-cart-discount form input[type="text"]{
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    height: 54px;
+    color: #777777;
+    font-family: "Poppins",sans-serif;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.xp-cart-total{
+    border: 9px solid #fcfcfc;
+    text-align: center;
+    padding: 40px 0 50px;
+}
+.xp-cart-total table{
+    width: 100%;
+}
+.xp-cart-total table tbody tr td{
+    color: #333333;
+    font-family: "Poppins",sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 6px 85px;
+    text-align: right;
+}
+.xp-cart-total table tbody tr td:last-child{
+    text-align: left;
+}
+.xp-cart-total .btn {
+    margin-top: 24px;
+}
+/*===============================
+         Checkout Strat
+===============================*/
+.xp-checkout .xp-billing-info{
+    width: 770px;
+    margin: 0 auto;
+}
+.xp-checkout .xp-billing-info .form-group{
+    margin-bottom: 10px;
+}
+.xp-checkout .xp-billing-info .form-group input[type="text"]{
+    background-color: #fafafa;
+    border: medium none;
+    color: #555555;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    height: 55px;
+    padding-left: 43px;
+    width: 100%;
+}
+.xp-checkout .xp-billing-info .xp-first-name{
+    padding-right: 5px;
+}
+.xp-checkout .xp-billing-info .xp-last-name{
+    padding-left: 5px;
+}
+.xp-payment-detail{
+    background-color: #fafafa;
+    padding: 60px 100px;
+    margin-top: 50px;
+}
+.xp-payment-detail-table{
+    background-color: #fff;
+    padding-top: 38px;
+}
+.xp-payment-detail-table table{
+    width: 100%;
+}
+.xp-payment-detail-table table tbody tr td{
+    color: #323232;
+    font-size: 13px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    padding: 8px 69px;
+    text-transform: uppercase;
+}
+.xp-payment-detail-table table tbody tr.xp-total td{
+    padding-top: 35px;
+    padding-bottom: 18px;
+}
+.xp-payment-detail .xp-polace-order{
+    padding-left: 71px;
+    padding-top: 44px;
+}
+.xp-payment-detail .xp-polace-order form {
+    display: inline-block;
+}
+.xp-payment-detail .xp-polace-order .form-group span{
+    color: #282828;
+    font-size: 13px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    margin-left: 13px;
+}
+.xp-payment-detail .xp-polace-order .form-group span img{
+    margin-left: 25px;
+}
+/* .squaredFour */
+.squaredFour {
+    width: 20px;
+    position: relative;
+    margin: 9px 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.squaredFour label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    border: 4px solid #ededed;
+    border-radius: 0px;
+}
+.squaredFour label::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #68b20d #68b20d;
+    border-image: none;
+    border-style: none none solid solid;
+    border-width: medium medium 3px 3px;
+    content: "";
+    height: 7px;
+    left: 1px;
+    opacity: 0;
+    position: absolute;
+    top: 1px;
+    transform: rotate(-45deg);
+    width: 11px;
+}
+.squaredFour input[type=checkbox] {
+    visibility: hidden;
+}
+.squaredFour input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+/* end .squaredFour */
+.xp-payment-detail .xp-polace-order a{
+    margin-bottom: 24px;
+    margin-left: 38px;
+}
+/*===============================
+       Welfare Project Strat
+===============================*/
+.xp-welfare-project-second .xp-welfare-inner{
+    margin-bottom: 43px;
+}
+/*===============================
+       Our Team Strat
+===============================*/
+.xp-our-team .xp-meet-healpers-inner{
+    margin-bottom: 50px;
+}
+/*===============================
+     Our Team Deatil Strat
+===============================*/
+.xp-team-detail{
+    padding-top: 110px;
+}
+.xp-team-detail-inner .xp-team-detail-text{
+    text-align: right;
+}
+.xp-team-detail-inner .xp-team-detail-text h3 a{
+    color: #444;
+    font-size: 24px;
+    display: inline-block;
+}
+.xp-team-detail-inner .xp-team-detail-text span{
+    display: block;
+    font-size: 13px;
+    padding-bottom: 29px;
+}
+.xp-team-detail-inner .xp-team-detail-text ul{
+    margin-top: 55px;
+}
+.xp-team-detail-inner .xp-team-detail-text ul li{
+    margin-top: 10px;
+}
+.xp-team-detail-inner .xp-team-detail-text ul li a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 27px;
+}
+.xp-team-detail-inner .xp-team-detail-text ul li i{
+    color: #fff;
+    font-size: 13px;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    padding-top: 13px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+.xp-team-detail-image .team-socail{
+    text-align: center;
+    margin-top: -29px;
+}
+.xp-team-detail-image .team-socail ul li{
+    display: inline-block;
+}
+.xp-team-detail-image .team-socail ul li a{
+    border: 5px solid #fff;
+    border-radius: 50px;
+    padding-top: 14px;
+    background-color: #3b579d;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+}
+.xp-team-detail-image .team-socail ul li a.google{
+    background-color: #dc4a38;
+}
+.xp-team-detail-image .team-socail ul li a.twitter{
+    background-color: #2caae1;
+}
+.xp-team-detail-services{}
+.xp-team-detail-services .xp-services-tow-inner{
+    border: 9px solid #fcfcfc;
+}
+.xp-team-detail-services .xp-services-tow-inner .xp-text-box h3 a{
+    color: #444444;
+}
+.xp-team-detail-services .xp-services-tow-inner .xp-text-box p{
+    color: #666;
+}
+/*===============================
+     Welfare Program Strat
+===============================*/
+.xp-welfear-progeam-main .xp-welfear-progeam{
+    padding-bottom: 95px;
+}
+.xp-load-more{
+    text-align: center;
+    margin-top: 59px;
+}
+.xp-load-more a{
+    border-radius: 0;
+}
+.xp-load-more a i{
+    margin-right: 15px;
+}
+/*===============================
+     Gallery Style 1 Strat
+===============================*/
+.xp-gallery-style-1 .button-group{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.xp-gallery-style-1 .button-group .button{
+    border: none;
+    background-color: transparent;
+    color: #444444;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    padding: 33px 27px;
+    transition: all 0.5s ease-in-out;
+}
+.xp-gallery-style-1 .button-group .button.is-checked{
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.xp-gallery-style-1 .xp-causes-gallery-inner {
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+.xp-causes-gallery-inner .xp-image-holder img{
+    width: 100%;
+}
+.xp-causes-gallery-inner .xp-text-hover img{
+    width: auto !important;
+}
+.xp-gallery-style-1 .xp-load-more {
+    margin-top: 40px;
+}
+/*===============================
+     Gallery Style 2 Strat
+===============================*/
+.xp-gallery-style2 .xp-causes-gallery-inner {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+/*===============================
+     Gallery Style 4 Strat
+===============================*/
+.xp-gallery-style4 .xp-causes-gallery-inner {
+    margin-top: 0;
+}
+/*===============================
+     Gallery Style 5 Strat
+===============================*/
+.xp-gallery-style5 .element-item {
+    padding: 0;
+}
+.xp-gallery-style5 .xp-causes-gallery-inner{
+    margin-bottom: 0;
+}
+/*===============================
+     Gallery Style 6 Strat
+===============================*/
+.xp-gallery-style6 .element-item {
+    padding: 0 5px;
+}
+.xp-gallery-style6 .xp-causes-gallery-inner{
+    margin-bottom: 10px;
+}
+/*===============================
+     About Us Strat
+===============================*/
+.xp-about-us-healpers{
+    padding-top: 0;
+}
+/*===============================
+      Contact Us Strat
+===============================*/
+.xp-contact-info-inner{
+    background-color: #fafafa;
+    padding: 45px 55px;
+    min-height: 172px;
+    position: relative;
+}
+.xp-contact-info-inner .xp-image-holder{
+    border-radius: 5px;
+    height: 80px;
+    position: absolute;
+    right: 40px;
+    text-align: center;
+    top: -35px;
+    width: 80px;
+}
+.xp-contact-info-inner .xp-text-box h3{
+    font-size: 18px;
+    color: #444;
+    padding-bottom: 12px;
+}
+.xp-contact-info-inner .xp-text-box a{
+    color: #666666;
+    font-size: 14px;
+}
+.xp-contact-us .xp-contact-map{
+    height: 530px;
+}
+.xp-contact-now{
+    padding-top: 110px;
+}
+.xp-contact-now .form-group{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.xp-contact-now .form-group input[type="text"] {
+    background-color: #fafafa;
+    border: medium none;
+    color: #555555;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    height: 55px;
+    padding-left: 43px;
+    width: 100%;
+}
+.xp-contact-now .form-group textarea{
+    background-color: #fafafa;
+    border: medium none;
+    color: #555555;
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    height: 190px;
+    padding: 35px;
+    width: 100%;
+}
+.xp-contact-now .form-group input[type="submit"] {
+    display: inline-block;
+    margin-top: 37px;
+} 
+.xp-contact-now .xp-first-name {
+    padding-right: 5px;
+}
+.xp-contact-now  .xp-last-name {
+    padding-left: 5px;
+}
+/*===============================
+      404 Error Strat
+===============================*/
+.xp-404-error{
+    position: relative;
+    height: 100vh;
+}
+.xp-404-error .xp-ovrlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.xp-404-error-main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.xp-404-error-inner .xp-text-box{
+    background-color: rgba(255, 255, 255, 0.10);
+    padding-top: 100px;
+    padding-bottom: 121px;
+    width: 770px;
+    margin: -67px auto 0;
+}
+.xp-404-error-inner .xp-text-box h3{
+    color: #fff;
+    padding-bottom: 8px;
+    text-transform: none;
+}
+.xp-404-error-inner .xp-text-box p{
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+.xp-404-error-inner .xp-search{
+    margin: -79px 0 0;
+}
+.xp-404-error-inner .xp-search form{
+    position: relative;
+    width: 74%;
+    margin: 0 auto;
+}
+.xp-404-error-inner .xp-search input[type="search"]{
+    background-color: #fff;
+    height: 61px;
+    border: none;
+    border-radius: 0;
+    color: #8c8c8c;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    padding-left: 60px;
+    width: 100%;
+    position: relative;
+}
+.xp-404-error-inner .xp-search input[type="submit"]{
+    font-size: 15px;
+    color: #222222;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 50px;
+    top: 21px;
+}
+/*===============================
+      Event Calender Strat
+===============================*/
+.xp-event-calender{
+    width: 980px;
+    margin: 0 auto;
+}
+.xp-event-calender table{
+    width: 100%;
+}
+.xp-event-calender table thead tr th{
+    text-align: center;
+    font-size: 13px;
+    color: #444444;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    padding: 20px 0;
+}
+.xp-event-calender table tbody tr td{
+    border-bottom:  1px solid #f0f0f0;
+    border-left:  1px solid #f0f0f0;
+    border-right:  1px solid #f0f0f0;
+    text-align: right;
+    padding-bottom: 91px;
+    padding-right: 30px;
+    padding-top: 21px;
+    font-size: 18px;
+    color: #444444;
+    font-weight: 600;
+    font-family: "Poppins",sans-serif;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.xp-event-calender table tbody tr td:hover{
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.select-monts{
+    border-bottom:  1px solid #f0f0f0;
+    border-right:  1px solid #f0f0f0;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+}
+.select-monts .month-right{
+    float: right;
+    margin-right: 32px;
+}
+.select-monts .month-left{
+    margin-left: 32px;
+}
+.select-monts h2{
+    text-align: center;
+    font-size: 26px;
+    color: #333333;
+    padding-top: 10px;
+}
