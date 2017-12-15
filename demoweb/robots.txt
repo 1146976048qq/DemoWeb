@@ -1,0 +1,12 @@
+#
+#
+User-agent: * 
+Disallow: /data
+Disallow: /hook
+Disallow: /include
+Disallow: /module
+Disallow: /template
+Disallow: /admin.php
+Disallow: /config.php
+Disallow: /common.php
+Disallow: /order/list

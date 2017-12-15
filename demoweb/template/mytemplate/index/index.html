@@ -1,0 +1,753 @@
+﻿<!--{include(pe_tpl('header.html'));}-->
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="xp-wrapper">
+            <header id="xp-header" class="layout">
+                <div class="xp-first-header layout">
+                    <div class="xp-top-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <div class="xp-top-search">
+                                        <form>
+                                            <input type="submit" class="fa" value="&#xf002;" /> 
+                                            <input type="search" name="search" placeholder="Search....." />
+                                        </form> 
+                                    </div>
+                                    <div class="xp-top-socail clearfix">
+                                        <ul class="clearfix">
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-12">
+                                    <div class="xp-top-location clearfix">
+                                        <ul class="clearfix">
+                                            <li><i class="fa fa-envelope"></i><a href="#">admin@ustc.edu.com</a></li>
+                                            <li><i class="fa fa-phone"></i><a href="#">0551-63601558</a></li>
+                                            <li><i class="fa fa-map-marker"></i><a href="#">Hefei,Anhui,China.</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xp-last-header">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <div class="xp-logo">
+                                        <a href="{$pe['host_root']}"><img style="width: 60%;" src="{pe_thumb($cache_setting['web_logo'])}" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <div class="xp-navigation">
+                                        <div class="navbar navbar-default" role="navigation">
+                                            <div class="navbar-header">
+                                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="navbar-collapse collapse">
+                                                    <ul class="nav navbar-nav pull-right">
+                                                        <li><a href="{$pe['host_root']}">Home</a></li>
+														<li><a href="#">Shop</a>
+															<div class="xp-sub-menu">
+																<ul>
+																	<li><a href="{pe_url('product-list')}">our products</a></li>
+																	<li><a href="{pe_url('product-'.$info['3'])}">products details</a></li>
+																	<li><a href="{pe_url('cart')}">cart</a></li>
+																	<li><a href="checkout.html">checkout</a></li>
+																</ul>
+															</div>
+														</li>
+														<li><a href="项目详情">Causes Detail</a></li>
+														<li><a href="{pe_url('product-list')}">Gallery</a></li>
+														<li><a href="{pe_url('article')}"">About</a></li>
+														<li><a href="contact-us.html">Contact</a></li>
+                                                    </ul>
+                                                </div><!--/.nav-collapse -->
+                                        </div>    
+                                        <div class="xp-donait-now">
+                                            <a href="{$pe['host_root']}user.php?mod=do&act=login&{pe_fromto()}">Lognin&nbsp;&nbsp; Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section id="xp-banner" class="layout">
+                <div class="xp-inner-banner xp-home1-banner">
+                    <div id="owl-vesion1-demo" class="owl-carousel owl-theme">
+                    	<!--{foreach($cache_ad['index_jdt'] as $k=>$v):}-->
+                        <div class="item">
+                            <figure class="xp-image-holder">
+                                <img style="width:100%;" src="{pe_thumb($v['ad_logo'])}" alt="" />
+                                 <div class="xp-ovrlay"></div>
+                                <figcaption class="xp-text-box">
+                                    <div class="child-pernt">
+                                        <div class="child">
+                                            <h2 style="color: white;">give a helping hand</h2><br/>
+                                            <a class="btn" href="#">ever wonder which nonprofit organizations</a>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!--{endforeach;}-->
+                    </div>
+                </div>
+            </section>
+            <main class="main-section layout">
+                <section class="section-padding layout">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="hedding">
+                                    <h2>Recent Campaigns</h2>
+                                    <p>Promote Life and Technology</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xp-recent-cause layout">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="recent-cause-owl">
+                                    	<!--{foreach($product_newlist as $k=>$v):}-->
+                                        <div class="item">
+                                            <div class="xp-recent-cause-inner">
+                                                <div class="xp-image-holder">
+                                                    <a href="#"><img src="{pe_thumb($v['product_logo'], 400, 400)}" title="{$v['product_name']}" alt="" /></a>
+                                                    <div class="xp-donat-buton">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <a class="btn" href="{pe_url('product-'.$v['product_id'])}">Donate Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="xp-donat-persntage">
+                                                        <div class="xp-persntage">{$v['product_wlmoney']/product_money($v['product_money'])*100}%</div>
+                                                        <div class="xp-donors"> <span> <i class="fa fa-heart"></i> {$v['product_point']} Donors </span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="xp-text-box">
+                                                    <h4><a href="#">{$v['product_name']}</a></h4>
+                                                    <p>{$v['product_hd_tag']}</p>
+                                                </div>
+                                                <div class="xp-donat-info layout">
+                                                    <ul class="layout">
+                                                        <li>
+                                                            <span>Donation Raise</span>
+                                                            <h3>$ {$v['product_wlmoney']}</h3>
+                                                        </li>
+                                                        <li>
+                                                            <span>Donation Goal</span>
+                                                            <h3>$ {product_money($v['product_money'])}</h3>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--{endforeach;}-->
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </section>
+                <section class="section-padding xp-process layout" data-parallax="scroll" data-image-src="{$pe['host_tpl']}images/prosess-banner.jpg">
+                    <div class="xp-ovrlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div id="xp-process-owl">
+                                <div class="item">
+                                    <div class="xp-process-inner">
+                                        <img src="{$pe['host_tpl']}images/process-shape-img1.png" alt="" />
+                                        <h3><a href="#">Find a Backer</a></h3>
+                                        <div class="xp-shape"></div>
+                                        <p>Millions of people around the world visit Indiegogo to 
+                                        	find clever and unconventional things .You can find 
+                                        	people who are interested in your campaign.</p>
+                                        <a class="read-more" href="#">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="xp-process-inner">
+                                        <img src="{$pe['host_tpl']}images/process-shape-img2.png" alt="" />
+                                        <h3><a href="#">Support Campaigns</a></h3>
+                                        <div class="xp-shape"></div>
+                                        <p>With live crowdfunding campaigns now, there’s no better 
+                                        	place to start the hunt for cool and clever innovations 
+                                        	that surprise and delight. Here is where new launches.</p>
+                                        <a class="read-more" href="#">Join NOw</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="xp-process-inner">
+                                        <img src="{$pe['host_tpl']}images/process-shape-img3.png" alt="" />
+                                        <h3><a href="#">Help For Others</a></h3>
+                                        <div class="xp-shape"></div>
+                                        <p>We supply the best and brightest campaigns for you. 
+                                        Sign up to find out about great technology, design, film, and much more 
+                                        — all before it hits the mainstream.</p>
+                                        <a class="read-more" href="#">Donate Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            <div class="col-md-4 col-sm-4 col-xs-6 xp-process-inner">
+                                                            <img src="{$pe['host_tpl']}images/process-shape-img1.png" alt="" />
+                                                            <h3><a href="#">Find a Service</a></h3>
+                                                            <div class="xp-shape"></div>
+                                                            <p>Duis sed odio sit amet nibh vulpuate cursus a 
+                                                                ris. Morbi accumsan ipsuy veli Nam nec telus 
+                                                                nt auctor Class aptent taciti socio</p>
+                                                            <a class="read-more" href="#">Read More</a>
+                                                        </div>
+                                                        <div class="col-md-4 col-sm-4 col-xs-6 xp-process-inner">
+                                                            <img src="{$pe['host_tpl']}images/process-shape-img2.png" alt="" />
+                                                            <h3><a href="#">Support Volunteers</a></h3>
+                                                            <div class="xp-shape"></div>
+                                                            <p>Duis sed odio sit amet nibh vulpuate cursus a 
+                                                                ris. Morbi accumsan ipsuy veli Nam nec telus 
+                                                                nt auctor Class aptent taciti socio</p>
+                                                            <a class="read-more" href="#">Join NOw</a>
+                                                        </div>
+                                                        <div class="col-md-4 col-sm-4 col-xs-6 xp-process-inner xp-last-spaces">
+                                                            <img src="{$pe['host_tpl']}images/process-shape-img3.png" alt="" />
+                                                            <h3><a href="#">Help For Heroes</a></h3>
+                                                            <div class="xp-shape"></div>
+                                                            <p>Duis sed odio sit amet nibh vulpuate cursus a 
+                                                                ris. Morbi accumsan ipsuy veli Nam nec telus 
+                                                                nt auctor Class aptent taciti socio</p>
+                                                            <a class="read-more" href="#">Donate Now</a>
+                                                        </div>-->
+                        </div>
+                    </div>
+                </section>
+                <!--<section class="section-padding layout">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="hedding">
+                                    <h2>Welfare Stories</h2>
+                                    <p>Promote and Monitor Human Rights</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xp-weleare-stories">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="xp-weleare-stories-inner">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <div class="xp-image-holder">
+                                                    <a href="#"> <img src="{$pe['host_tpl']}images/welfare-stories-img1.jpg" alt="" /> </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <div class="xp-text-box">
+                                                    <a class="btn" href="#">in South Africa</a>
+                                                    <h3><a href="#">Foundations Collaborate Support Flint Recovery</a></h3>
+                                                    <span>Donation Raise: <strong>$316,500</strong> </span>
+                                                    <p>Duis sed odio sit amet nibh vulpuate cursus a sit amet
+                                                        ris. Morbi accumsan ipsuy veli Nam telus aodio tincidu
+                                                        nt auctor Class aptent taciti sociosqu adlitora orquper
+                                                        eodio Sed non mauris erat it an consequat auctor.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="xp-weleare-stories-listing layout">
+                                        <ul>
+                                            <li><a href="#">By Theodore</a></li>
+                                            <li><a href="#">24 December 2017</a></li>
+                                            <li><a href="#">Welfair Stories</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xp-weleare-stories xp-weleare-stories-second">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="xp-weleare-stories-inner">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <div class="xp-text-box">
+                                                    <a class="btn" href="#">in South Africa</a>
+                                                    <h3><a href="#">Have Committed to Work Together to Help</a></h3>
+                                                    <span>Donation Raise: <strong>$316,500</strong> </span>
+                                                    <p>Duis sed odio sit amet nibh vulpuate cursus a sit amet
+                                                        ris. Morbi accumsan ipsuy veli Nam telus aodio tincidu
+                                                        nt auctor Class aptent taciti sociosqu adlitora orquper
+                                                        eodio Sed non mauris erat it an consequat auctor.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <div class="xp-image-holder">
+                                                    <a href="#"> <img src="{$pe['host_tpl']}images/welfare-stories-img2.jpg" alt="" /> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="xp-weleare-stories-listing xp-weleare-stories-listing-second layout">
+                                        <ul>
+                                            <li><a href="#">By Theodore</a></li>
+                                            <li><a href="#">24 December 2017</a></li>
+                                            <li><a href="#">Welfair Stories</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="view-stories">
+                                    <a class="btn" href="#">View All Stories</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>-->
+                <section class="section-padding layout">
+                    <div class="xp-meet-healpers">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="hedding">
+                                        <h2>Meet Our Healpers</h2>
+                                        <p>Promote and Monitor Human Rights</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="meet-healpers-owl">
+                                        <div class="item">
+                                            <div class="xp-meet-healpers-inner">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/meet-healpers-img1.jpg" alt="" /></a>
+                                                    <figcaption class="xp-text-box">
+                                                        <h4><a href="#">Elisabeth Conner</a></h4>
+                                                        <span>Graphic Designer</span>
+                                                        <p>Duis sed odio sit amet ilem 
+                                                            nibh vulpuate cursus a ctor
+                                                            sit amet mau ris Morbi vite
+                                                            accumsan ipsuy veli. </p>
+                                                        <div class="xp-phone-numbr">
+                                                            <i class="fa fa-phone"></i>   +1 2345 678901
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="xp-meet-healpers-inner">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/meet-healpers-img2.jpg" alt="" /></a>
+                                                    <figcaption class="xp-text-box">
+                                                        <h4><a href="#">Johnny Cash</a></h4>
+                                                        <span>Web Developer</span>
+                                                        <p>Duis sed odio sit amet ilem 
+                                                            nibh vulpuate cursus a ctor
+                                                            sit amet mau ris Morbi vite
+                                                            accumsan ipsuy veli. </p>
+                                                        <div class="xp-phone-numbr">
+                                                            <i class="fa fa-phone"></i>   +1 2345 678901
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="xp-meet-healpers-inner">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/meet-healpers-img3.jpg" alt="" /></a>
+                                                    <figcaption class="xp-text-box">
+                                                        <h4><a href="#">Matthew James</a></h4>
+                                                        <span>CEO Organizer</span>
+                                                        <p>Duis sed odio sit amet ilem 
+                                                            nibh vulpuate cursus a ctor
+                                                            sit amet mau ris Morbi vite
+                                                            accumsan ipsuy veli. </p>
+                                                        <div class="xp-phone-numbr">
+                                                            <i class="fa fa-phone"></i>   +1 2345 678901
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="xp-meet-healpers-inner">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/meet-healpers-img4.jpg" alt="" /></a>
+                                                    <figcaption class="xp-text-box">
+                                                        <h4><a href="#">Stephan Smith</a></h4>
+                                                        <span>Graphic Designer</span>
+                                                        <p>Duis sed odio sit amet ilem 
+                                                            nibh vulpuate cursus a ctor
+                                                            sit amet mau ris Morbi vite
+                                                            accumsan ipsuy veli. </p>
+                                                        <div class="xp-phone-numbr">
+                                                            <i class="fa fa-phone"></i>   +1 2345 678901
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="xp-become-volunteer layout">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="xp-become-volunteer-inner latyout" data-parallax="scroll" data-image-src="{$pe['host_tpl']}images/become-volunteer-img.jpg">
+                                    <div class="xp-ovelay"></div>
+                                    <div class="xp-text-box clearfix">
+                                        <div class="xp-text-box-inner">
+                                            <h3><a href="#">Become A <span>Volunteer</span></a></h3>
+                                            <p>Duis sed odio sit amet nibh vulpuate cursus a sit amet ris Morbi accumsan 
+                                                ipsuy veli Nam telus aodio tincidu nt auctor Class aptentsociosqu adlitora 
+                                                orquper biea Mauris ine odio condimentumam.</p>
+                                        </div>
+                                        <div class="xp-join-noew">
+                                            <a href="{$pe['host_root']}user.php?mod=do&act=register">Join Now</a>
+                                        </div>
+                                    </div>
+
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="xp-charity-news layout">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="hedding">
+                                    <br /><br /><h2>Charity News</h2>
+                                    <p>Promote and Monitor Human Rights</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="xp-charity-news-owl">
+                                    <div class="item">
+                                        <div class="xp-charity-news-inner">
+                                            <div class="xp-image-holder">
+                                                <a href="#"><img src="{$pe['host_tpl']}images/charity-news-img1.jpg" alt="" /></a>
+                                                <div class="xp-date">
+                                                    <h3>24</h3>
+                                                    <p>December</p>
+                                                </div>
+                                            </div>
+                                            <div class="xp-text-box">
+                                                <ul>
+                                                    <li>812 Views</li>
+                                                    <li> 8 Comments</li>
+                                                </ul>
+                                                <h4><a href="#">Protection Social Inclusion</a></h4>
+                                                <p>Excepteur sint occaecat cupidatat non proident, 
+                                                    qui officiadeserunt mollit anim id amet, consecur 
+                                                    adipisicing elitsed do eiusmod.......</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="xp-charity-news-inner">
+                                            <div class="xp-image-holder">
+                                                <a href="#"><img src="{$pe['host_tpl']}images/charity-news-img2.jpg" alt="" /></a>
+                                                <div class="xp-date">
+                                                    <h3>25</h3>
+                                                    <p>December</p>
+                                                </div>
+                                            </div>
+                                            <div class="xp-text-box">
+                                                <ul>
+                                                    <li>812 Views</li>
+                                                    <li> 8 Comments</li>
+                                                </ul>
+                                                <h4><a href="#">Child Survival Development</a></h4>
+                                                <p>Excepteur sint occaecat cupidatat non proident, 
+                                                    qui officiadeserunt mollit anim id amet, consecur 
+                                                    adipisicing elitsed do eiusmod.......</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="xp-charity-news-inner">
+                                            <div class="xp-image-holder">
+                                                <a href="#"><img src="{$pe['host_tpl']}images/charity-news-img3.jpg" alt="" /></a>
+                                                <div class="xp-date">
+                                                    <h3>28</h3>
+                                                    <p>December</p>
+                                                </div>
+                                            </div>
+                                            <div class="xp-text-box">
+                                                <ul>
+                                                    <li>812 Views</li>
+                                                    <li> 8 Comments</li>
+                                                </ul>
+                                                <h4><a href="#">The Fight for Women's Health</a></h4>
+                                                <p>Excepteur sint occaecat cupidatat non proident, 
+                                                    qui officiadeserunt mollit anim id amet, consecur 
+                                                    adipisicing elitsed do eiusmod.......</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="section-padding layout">
+                    <div class="container">
+                        <div class="xp-welfair-events">
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-1 col-sm-5 col-xs-12">
+                                    <div class="xp-welfair-inner">
+                                        <div class="xp-text-box">
+                                            <span>Promote and Monitor Human Rights</span>
+                                            <h3><a href="#">Welfair Events</a></h3>
+                                            <p>Duis sed odio sit amet nibh vulpuate cursus a sit
+                                                Morbi accumsan ipsuy veli. Nam nec telus aodio 
+                                                Class aptent taciti sociosqu adliora orquper conu
+                                                odio condimentum sit am lorem thats ornar eodio
+                                                consequat auctor.</p>
+                                            <div class="xp-view-calendar">
+                                                <a href="#">View Calendar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7 col-xs-12">
+                                    <div class="xp-events-inner">
+                                        <div class="grid8 layout">
+                                            <div class="xp-events-grid grid-item">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/welfair-events-img1.jpg" alt="" /></a>
+                                                    <div class="xp-text-box">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <span>November 19 - 2017</span>
+                                                                <h3><a href="#">Organise an Event to Raise Money</a></h3>
+                                                                <a class="btn" href="#"> <i class="fa fa-check"></i> Free for Everyone</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="xp-text-hover">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <i class="fa fa-map-marker"></i>
+                                                                <p>105 Ohua ave. Belgium from 
+                                                                    the US, Europe and Asia </p>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                            <div class="xp-events-grid grid-item">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/welfair-events-img2.jpg" alt="" /></a>
+                                                    <div class="xp-text-box">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <span>November 19 - 2017</span>
+                                                                <h3><a href="#">Organise an Event to Raise Money</a></h3>
+                                                                <a class="btn" href="#"> <i class="fa fa-check"></i> Free for Everyone</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="xp-text-hover">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <i class="fa fa-map-marker"></i>
+                                                                <p>105 Ohua ave. Belgium from 
+                                                                    the US, Europe and Asia </p>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                            <div class="xp-events-grid grid-item">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/welfair-events-img3.jpg" alt="" /></a>
+                                                    <div class="xp-text-box">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <span>November 19 - 2017</span>
+                                                                <h3><a href="#">Organise an Event to Raise Money</a></h3>
+                                                                <a class="btn" href="#"> <i class="fa fa-check"></i> Free for Everyone</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="xp-text-hover">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <i class="fa fa-map-marker"></i>
+                                                                <p>105 Ohua ave. Belgium from 
+                                                                    the US, Europe and Asia </p>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                            <div class="xp-events-grid grid-item">
+                                                <figure class="xp-image-holder">
+                                                    <a href="#"><img src="{$pe['host_tpl']}images/welfair-events-img4.jpg" alt="" /></a>
+                                                    <div class="xp-text-box">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <span>November 19 - 2017</span>
+                                                                <h3><a href="#">Organise an Event to Raise Money</a></h3>
+                                                                <a class="btn" href="#"> <i class="fa fa-check"></i> Free for Everyone</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="xp-text-hover">
+                                                        <div class="child-pernt">
+                                                            <div class="child">
+                                                                <i class="fa fa-map-marker"></i>
+                                                                <p>105 Ohua ave. Belgium from 
+                                                                    the US, Europe and Asia </p>
+                                                            </div>
+                                                        </div> 
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+            <footer id="footer" class="layout">
+                <div class="footer section-padding layout" data-parallax="scroll" data-image-src="{$pe['host_tpl']}images/footer-bg.jpg">
+                    <div class="xp-ovrlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="footer-inner layout">
+                                    <h3><span></span>flickr widget</h3>
+                                    <div class="footer-flicker layout">
+                                        <ul class="layout">
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img1.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img2.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img3.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img4.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img5.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img6.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img7.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img8.jpg" alt=""></a></li>
+                                            <li><a href="#"><img src="{$pe['host_tpl']}images/footer-flickr-img9.jpg" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="footer-inner layout">
+                                    <h3><span></span>Help Compains</h3>
+                                    <div class="footer-help-comanis layout">
+                                        <ul class="layout">
+                                            <li> <div class="xp-shapes"></div> <a href="#">What's the structure ads?</a></li>
+                                            <li> <div class="xp-shapes"></div> <a href="#">Campaign Builder Terminology</a></li>
+                                            <li> <div class="xp-shapes"></div> <a href="#">create up to 5000 campaigns.</a></li>
+                                            <li> <div class="xp-shapes"></div> <a href="#">Hugely Successful when it Comes</a></li>
+                                            <li> <div class="xp-shapes"></div> <a href="#">Strong and can be Attributed</a></li>
+                                            <li> <div class="xp-shapes"></div> <a href="#">The Fight For Women's Care</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="footer-inner layout">
+                                    <h3><span></span>Latest News</h3>
+                                    <div class="footer-latest-news layout">
+                                        <div class="footer-latest-inner layout">
+                                            <div class="xp-image-holder">
+                                                <a href="#"><img src="{$pe['host_tpl']}images/footer-latest-news-img1.jpg" alt="" /></a>
+                                            </div>
+                                            <div class="xp-text-box">
+                                                <span>24 December 2017</span>
+                                                <h4><a href="#">Protection and Social Inclusion</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="footer-latest-inner layout">
+                                            <div class="xp-image-holder">
+                                                <a href="#"><img src="{$pe['host_tpl']}images/footer-latest-news-img2.jpg" alt="" /></a>
+                                            </div>
+                                            <div class="xp-text-box">
+                                                <span>24 December 2017</span>
+                                                <h4><a href="#">through sponsored moustache</a></h4>
+                                            </div>
+                                        </div>
+                                        <div class="footer-latest-inner  layout">
+                                            <div class="xp-image-holder">
+                                                <a href="#"><img src="{$pe['host_tpl']}images/footer-latest-news-img3.jpg" alt="" /></a>
+                                            </div>
+                                            <div class="xp-text-box">
+                                                <span>24 December 2017</span>
+                                                <h4><a href="#">based on shared humour</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                <div class="footer-inner layout">
+                                    <h3><span></span>About us</h3>
+                                    <div class="footer-pain layout">
+                                        <p>Rem iplsum dolor amet, consectetuer 
+                                            adipiscingelit, sed diam nonummy nib
+                                            euismod tincidu laoreet dolore magna
+                                            aliquam erat volutpat euimod....</p>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                        <p>Address: University of Science and Technology of China, No.96, 
+                                        	JinZhai Road Baohe District.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="xp-copyright layout">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Copyright &copy; 2017. BDAA All rights reserved .<a target="_blank" href="#"> Financial Group</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+        </div>
+<!--{include(pe_tpl('footer.html'));}-->

@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Style Sheets-->
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Arimo:400,700|Poppins:300,400,500,600,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/normalize.css">
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/owl.carousel.css">
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/owl.theme.css">
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>fonts/flaticon.css"> 
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/style.css">  
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/swiper.min.css">  
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/main.css">
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/responsive.css">
+        <link rel="stylesheet" href="<?php echo $pe['host_tpl'] ?>css/color.css">
+        <script src="<?php echo $pe['host_tpl'] ?>js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+<!--<div class="quick_menu">
+	<div class="width980">
+		<span class="fl">欢迎来到<?php echo $cache_setting['web_title'] ?>！</span>
+		<div class="fr top_r">
+			<?php if(pe_login('user')):?>
+			您好：
+			<a href="<?php echo $pe['host_root'] ?>user.php" style="color:#DF002F;padding:0;border:0"><?php echo $_s_user_name ?></a>
+			<a href="<?php echo $pe['host_root'] ?>user.php?mod=do&act=logout" title="退出" style="padding-left:0;color:#999">[退出]</a>
+			<?php else:?>
+			<a href="<?php echo $pe['host_root'] ?>user.php?mod=do&act=login&<?php echo pe_fromto() ?>" title="登录">Log In</a>
+			<a href="<?php echo $pe['host_root'] ?>user.php?mod=do&act=register&<?php echo pe_fromto() ?>" title="注册">Sign In</a>
+			<?php endif;?>
+			<a href="<?php echo $pe['host_root'] ?>user.php?mod=order" title="我的订单" class="scj">My Order</a>
+			<a href="<?php echo pe_url('article-news') ?>" title="资讯中心">Information Center</a>
+			<a href="<?php echo pe_url('article-help') ?>" title="帮助中心" style="border-right:0;">Support Center</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="width980">
+<?php echo ad_show('header') ?>
+<?php if($mod=='index'):?><?php echo ad_show('index_header') ?><?php endif;?>
+</div>-->

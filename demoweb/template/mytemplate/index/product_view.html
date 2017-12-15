@@ -1,0 +1,643 @@
+<!--{include(pe_tpl('header.html'));}-->
+<div id="xp-wrapper">
+	<header id="xp-header" class="layout">
+		<div class="xp-vresion-three-header layout">
+			<div class="xp-top-header layout">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-sm-8 col-xs-8">
+							<div class="xp-top-location clearfix">
+								<ul class="clearfix">
+									<li><i class="fa fa-envelope"></i>
+										<a href="#">admin@ustc.edu.com</a>
+									</li>
+									<li><i class="fa fa-phone"></i>
+										<a href="#">0551-63601558</a>
+									</li>
+									<li><i class="fa fa-map-marker"></i>
+										<a href="#">Hefei,Anhui,China.</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<div class="xp-cart-item clearfix">
+								<div class="xp-image-holder">
+									<div class="child-pernt">
+										<div class="child">
+											<img src="{$pe['host_root']}template/mytemplate/index/images/cart-icon.png" alt="" />
+										</div>
+									</div>
+									<a href="{pe_url('cart')}"><i class="fa fa-sort-desc"></i></a>
+								</div>
+								<div class="xp-text-box">
+									<p>My Cart {user_cartnum()} item</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="xp-last-header layout">
+				<div class="container">
+					<div class="xp-last-heade-inner">
+						<div class="row">
+							<div class="col-md-3 col-sm-3 col-xs-12">
+								<div class="xp-logo">
+									<a href="{$pe['host_root']}"><img src="{pe_thumb($cache_setting['web_logo'])}" alt="" /></a>
+								</div>
+							</div>
+							<div class="col-md-9 col-sm-9 col-xs-12">
+								<div class="xp-navigation">
+									<div class="navbar navbar-default" role="navigation">
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </button>
+										</div>
+										<div class="navbar-collapse collapse">
+											<ul class="nav navbar-nav pull-right">
+												<li>
+													<a href="{$pe['host_root']}">Home</a>
+												</li>
+												<li>
+													<a href="#">Shop</a>
+													<div class="xp-sub-menu">
+														<ul>
+															<li>
+																<a href="{pe_url('product-list')}">our products</a>
+															</li>
+															<li>
+																<a href="products-details.html">products details</a>
+															</li>
+															<li>
+																<a href="{pe_url('cart')}">cart</a>
+															</li>
+															<li>
+																<a href="checkout.html">checkout</a>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<a href="our-causes-detail.html">Causes Detail</a>
+												</li>
+												<li>
+													<a href="{pe_url('product-list')}">Gallery</a>
+												</li>
+												<li>
+													<a href="{pe_url('article')}">About</a>
+												</li>
+												<li>
+													<a href="contact-us.html">Contact</a>
+												</li>
+											</ul>
+										</div>
+										<!--/.nav-collapse -->
+									</div>
+									<div class="xp-donait-now">
+										<a href="#">Donate Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="xp-banner" class="layout">
+		<div class="xp-inner-banner xp-all-inner-banner" data-parallax="scroll" data-image-src="{$pe['host_root']}template/mytemplate/index/images/all-inner-banner.jpg">
+			<div class="xp-ovrlay"></div>
+			<div class="xp-text-box">
+				<div class="child-pernt">
+					<div class="child">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="xp-text-box-innr">
+										<h1>Causes details</h1>
+										<p>Can you Support US</p>
+										<ol class="breadcrumb">
+											<li>
+												<a href="{$pe['host_root']}">Home</a>
+											</li>
+											<li class="active">Causes details</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<main class="main-section layout">
+		<section class="section-padding">
+			<div class="container">
+				<div class="xp-our-causes-detail layout">
+					<div class="col-md-9">
+						<div class="xp-our-causes-detail-inner">
+							<div class="our-causes-detail-support">
+								<div class="spec-items">
+									<ul>
+										<!--{foreach($album_list as $k=>$v):}-->
+										<li><img style="max-width: 100%;" src="{pe_thumb($v, 400, 400)}" bigimg="{pe_thumb($v)}" /></li>
+										<!--{endforeach;}-->
+									</ul>
+								</div>
+								<div class="xp-text-box">
+									<div class="xp-text-box-inner clearfix">
+										<a class="btn" href="#">{$info['product_name']}</a>
+										<h3><a href="#">Parenting Education Support</a></h3>
+										<span>in South Africa</span>
+										<div class="xp-theodore">
+											<ul>
+												<li>Donation Raise: <strong>$ {$info['product_wlmoney']}</strong></li>
+												<li>Donation Goal: <strong>$ {product_money($info['product_money'])}</strong></li>
+											</ul>
+										</div>
+										<a class="btn2" href="javascript:cart_add('cart', '{$info['product_id']}');">Donate Now</a>
+									</div>
+									<div class="xp-donat-persntage">
+										<div class="xp-persntage">{$info['product_wlmoney']/product_money($info['product_money'])*100}%</div>
+										<div class="xp-donors"> <span> <i class="fa fa-heart"></i> {$info['product_point']} Donors </span></div>
+									</div>
+								</div>
+							</div>
+							<div>
+								</br>
+								</br>
+								</br>
+								</br>
+								<p style="font-weight: bold; font-size: 32; color: black;">
+									<a class="btn" href="#">
+										<font color="#000000">Stories about this campaign :</font>
+									</a>
+								</p>
+							</div>
+							<div class="promain js_menuhtml">
+								<br/><br/>
+								<p>{$info['product_text']}
+								</p>
+							</div>
+
+							<div class="xp-causes-quote" data-parallax="scroll" data-image-src="{$pe['host_root']}template/mytemplate/index/images/causes-details-paralax-image.jpg">
+								<p>Duis convallis turpis in tortor vo are risus euismod varius feugiat ultrices Sed <span>condimentum est</span> libero, aliqculis</p>
+							</div>
+
+							<div class="xp-causes-gallery">
+								<div class="row">
+									<div class="col-md-4 col-sm-4 col-xs-6">
+										<div class="xp-causes-gallery-inner">
+											<div class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-img1.jpg" alt="" /></a>
+												<div class="xp-text-hover">
+													<div class="child-pernt">
+														<div class="child">
+															<img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-hover-icon.png" alt="" />
+															<p>Permission to Raise or Awareness</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 col-xs-6">
+										<div class="xp-causes-gallery-inner">
+											<div class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-img2.jpg" alt="" /></a>
+												<div class="xp-text-hover">
+													<div class="child-pernt">
+														<div class="child">
+															<img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-hover-icon.png" alt="" />
+															<p>Permission to Raise or Awareness</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 col-xs-6">
+										<div class="xp-causes-gallery-inner">
+											<div class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-img3.jpg" alt="" /></a>
+												<div class="xp-text-hover">
+													<div class="child-pernt">
+														<div class="child">
+															<img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-hover-icon.png" alt="" />
+															<p>Permission to Raise or Awareness</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 col-xs-6">
+										<div class="xp-causes-gallery-inner">
+											<div class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-img4.jpg" alt="" /></a>
+												<div class="xp-text-hover">
+													<div class="child-pernt">
+														<div class="child">
+															<img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-hover-icon.png" alt="" />
+															<p>Permission to Raise or Awareness</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 col-xs-6">
+										<div class="xp-causes-gallery-inner">
+											<div class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-img5.jpg" alt="" /></a>
+												<div class="xp-text-hover">
+													<div class="child-pernt">
+														<div class="child">
+															<img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-hover-icon.png" alt="" />
+															<p>Permission to Raise or Awareness</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 col-xs-6">
+										<div class="xp-causes-gallery-inner">
+											<div class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-img6.jpg" alt="" /></a>
+												<div class="xp-text-hover">
+													<div class="child-pernt">
+														<div class="child">
+															<img src="{$pe['host_root']}template/mytemplate/index/images/causes-gallery-hover-icon.png" alt="" />
+															<p>Permission to Raise or Awareness</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<h4>
+										<p style="font-weight: bold; font-size: 32; color: black;">
+									<a class="btn" href="#"><font color="#000000">COMMENT about  this  campaign :</font></a>
+								</p>
+									</h4>
+								</div>
+								<p>Integer sollicitudin ligula non enim sodales, non lacinia nunc or nare. Sewid commodo tempor dapibus. Duis convallis turpis are risus in euismod varius nullam feugiat ultrices. Sed condimentum est libero, aliq culis.Phasellus scelerisque ullamcorper mollis. Donec et libero quis erat commodo suscipit. Mae elit a, eleifend leo Phase pharetra mi ctor diam iarciet idisse rhoncu u t pharetrnisi vestibul mum ornare.Lorie ipsum dolor stamet, cons ctetur adipiselit.
+								</p>
+							</div>
+							<div class="xp-causes-tags">
+								<h3>Post Tags:</h3>
+								<ul>
+									<li>
+										<a href="#">Welfair Project</a>
+									</li>
+									<li>
+										<a href="#">Kids</a>
+									</li>
+									<li>
+										<a href="#">Donation</a>
+									</li>
+									<li>
+										<a href="#">Fundraise</a>
+									</li>
+									<li>
+										<a href="#">Helping Hand</a>
+									</li>
+								</ul>
+							</div>
+							<div class="xp-causesdetail-donors">
+								<span>Promote and Monitor Human Rights</span>
+								<h3>Cause Donors</h3>
+								<div class="xp-donaters-help-right">
+									<div id="donaters-help-owl">
+										<div class="item">
+											<figure class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/help-donors-img1.jpg" alt="" /></a>
+												<figcaption class="xp-text-box">
+													<span>Businessman</span>
+													<h3><a href="#">Walker Smith</a></h3>
+													<div class="xp-price">Donated : $252.00</div>
+												</figcaption>
+											</figure>
+										</div>
+										<div class="item">
+											<figure class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/help-donors-img2.jpg" alt="" /></a>
+												<figcaption class="xp-text-box">
+													<span>Social Worker</span>
+													<h3><a href="#">Josfy Villims</a></h3>
+													<div class="xp-price">Donated : $164.00</div>
+												</figcaption>
+											</figure>
+										</div>
+										<div class="item">
+											<figure class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/help-donors-img3.jpg" alt="" /></a>
+												<figcaption class="xp-text-box">
+													<span>Businessman</span>
+													<h3><a href="#">Qirey Volker</a></h3>
+													<div class="xp-price">Donated : $95.00</div>
+												</figcaption>
+											</figure>
+										</div>
+										<div class="item">
+											<figure class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/help-donors-img1.jpg" alt="" /></a>
+												<figcaption class="xp-text-box">
+													<span>Businessman</span>
+													<h3><a href="#">Walker Smith</a></h3>
+													<div class="xp-price">Donated : $252.00</div>
+												</figcaption>
+											</figure>
+										</div>
+										<div class="item">
+											<figure class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/help-donors-img2.jpg" alt="" /></a>
+												<figcaption class="xp-text-box">
+													<span>Social Worker</span>
+													<h3><a href="#">Josfy Villims</a></h3>
+													<div class="xp-price">Donated : $164.00</div>
+												</figcaption>
+											</figure>
+										</div>
+										<div class="item">
+											<figure class="xp-image-holder">
+												<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/help-donors-img3.jpg" alt="" /></a>
+												<figcaption class="xp-text-box">
+													<span>Businessman</span>
+													<h3><a href="#">Qirey Volker</a></h3>
+													<div class="xp-price">Donated : $95.00</div>
+												</figcaption>
+											</figure>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="xp-side-bar layout">
+							<div class="widget xp-widget xp-recent-post layout">
+								<h2><span></span>Recent Posts</h2>
+								<div class="xp-recent-post-inner">
+									<div class="xp-recent-colum clearfix">
+										<div class="xp-recent-date">
+											<h3>21</h3>
+											<span>December</span>
+										</div>
+										<div class="xp-text-box">
+											<span>By John Doe</span>
+											<h4><a href="#">Protection and Social 
+                                                            Inclusion</a></h4>
+										</div>
+									</div>
+									<div class="xp-recent-colum clearfix">
+										<div class="xp-recent-date">
+											<h3>26</h3>
+											<span>December</span>
+										</div>
+										<div class="xp-text-box">
+											<span>By Smith Viller</span>
+											<h4><a href="#">Child Survival and 
+                                                            Development</a></h4>
+										</div>
+									</div>
+									<div class="xp-recent-colum clearfix">
+										<div class="xp-recent-date">
+											<h3>14</h3>
+											<span>December</span>
+										</div>
+										<div class="xp-text-box">
+											<span>By Doe Lumines</span>
+											<h4><a href="#">The Fight for Women's 
+                                                            Health</a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="widget xp-widget xp-categories layout">
+								<h2><span></span>Categories</h2>
+								<div class="xp-categories-inner">
+									<ul>
+										<li>
+											<a href="#">Welfair Project</a><span>10</span></li>
+										<li>
+											<a href="#">Charity Causes</a><span>12</span></li>
+										<li>
+											<a href="#">Programs</a><span>08</span></li>
+										<li>
+											<a href="#">Animals News</a><span>06</span></li>
+										<li>
+											<a href="#">Fundraiser Help</a><span>65</span></li>
+										<li>
+											<a href="#">New Project</a><span>12</span></li>
+									</ul>
+								</div>
+							</div>
+							<div class="widget xp-widget xp-popular-post layout">
+								<h2><span></span>popular post</h2>
+								<div class="xp-popular-inner">
+									<div class="xp-image-holder">
+										<img src="{$pe['host_root']}template/mytemplate/index/images/popular-post-img1.jpg" alt="" />
+										<div class="xp-text-box">
+											<div class="child-pernt">
+												<div class="child">
+													<p>November 19 - 2017</p>
+													<h3><a href="#">Protection and Social
+                                                                    Inclusion</a></h3>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="xp-image-holder">
+										<img src="{$pe['host_root']}template/mytemplate/index/images/popular-post-img2.jpg" alt="" />
+										<div class="xp-text-box">
+											<div class="child-pernt">
+												<div class="child">
+													<p>November 19 - 2017</p>
+													<h3><a href="#">Health remains Unfulfilled
+                                                                    Kenyan children</a></h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="widget xp-widget xp-charity-video layout">
+								<h2><span></span>charity Video</h2>
+								<div class="xp-charity-video-inner">
+									<div class="xp-image-holder">
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/charity-vedio-img.jpg" alt="" /></a>
+										<div class="xp-mouse-hover">
+											<div class="child-pernt">
+												<div class="child">
+													<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/video-icon.png" alt="" /></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="xp-text-box">
+										<h3><a href="#">Protection Social Inclusion</a></h3>
+										<p>November 19 - 2017</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer id="footer" class="layout">
+		<div class="footer section-padding layout" data-parallax="scroll" data-image-src="images/footer-bg.jpg">
+			<div class="xp-ovrlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="footer-inner layout">
+							<h3><span></span>flickr widget</h3>
+							<div class="footer-flicker layout">
+								<ul class="layout">
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img1.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img2.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img3.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img4.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img5.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img6.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img7.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img8.jpg" alt=""></a>
+									</li>
+									<li>
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-flickr-img9.jpg" alt=""></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="footer-inner layout">
+							<h3><span></span>Help Compains</h3>
+							<div class="footer-help-comanis layout">
+								<ul class="layout">
+									<li>
+										<div class="xp-shapes"></div>
+										<a href="#">What's the structure ads?</a>
+									</li>
+									<li>
+										<div class="xp-shapes"></div>
+										<a href="#">Campaign Builder Terminology</a>
+									</li>
+									<li>
+										<div class="xp-shapes"></div>
+										<a href="#">create up to 5000 campaigns.</a>
+									</li>
+									<li>
+										<div class="xp-shapes"></div>
+										<a href="#">Hugely Successful when it Comes</a>
+									</li>
+									<li>
+										<div class="xp-shapes"></div>
+										<a href="#">Strong and can be Attributed</a>
+									</li>
+									<li>
+										<div class="xp-shapes"></div>
+										<a href="#">The Fight For Women's Care</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4 col-xs-6">
+						<div class="footer-inner layout">
+							<h3><span></span>Latest News</h3>
+							<div class="footer-latest-news layout">
+								<div class="footer-latest-inner layout">
+									<div class="xp-image-holder">
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-latest-news-img1.jpg" alt="" /></a>
+									</div>
+									<div class="xp-text-box">
+										<span>24 December 2017</span>
+										<h4><a href="#">Protection and Social Inclusion</a></h4>
+									</div>
+								</div>
+								<div class="footer-latest-inner layout">
+									<div class="xp-image-holder">
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-latest-news-img2.jpg" alt="" /></a>
+									</div>
+									<div class="xp-text-box">
+										<span>24 December 2017</span>
+										<h4><a href="#">through sponsored moustache</a></h4>
+									</div>
+								</div>
+								<div class="footer-latest-inner  layout">
+									<div class="xp-image-holder">
+										<a href="#"><img src="{$pe['host_root']}template/mytemplate/index/images/footer-latest-news-img3.jpg" alt="" /></a>
+									</div>
+									<div class="xp-text-box">
+										<span>24 December 2017</span>
+										<h4><a href="#">based on shared humour</a></h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-6">
+						<div class="footer-inner layout">
+							<h3><span></span>About us</h3>
+							<div class="footer-pain layout">
+								<p>Rem iplsum dolor amet, consectetuer adipiscingelit, sed diam nonummy nib euismod tincidu laoreet dolore magna aliquam erat volutpat euimod....</p>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-phone"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-map-marker"></i></a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-envelope"></i></a>
+									</li>
+								</ul>
+								<p>No.96, JinZhai Road Baohe District, University of Science and Technology of China, </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="xp-copyright layout">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Copyright &copy; 2017. BDAA All rights reserved .
+							<a target="_blank" href="#"> Financial Group</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+</div>
+<!--{include(pe_tpl('footer.html'));}-->
